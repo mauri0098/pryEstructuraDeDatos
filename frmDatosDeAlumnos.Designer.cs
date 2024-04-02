@@ -113,7 +113,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::pryEstructuraDeDatos.Properties.Resources.IMG_20211231_223131032_HDR1;
-            this.pictureBox1.Location = new System.Drawing.Point(291, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(287, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(253, 206);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

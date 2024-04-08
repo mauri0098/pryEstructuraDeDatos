@@ -272,6 +272,7 @@
             this.Controls.Add(this.gbElementoEliminado);
             this.Controls.Add(this.gbNuevoElemento);
             this.Name = "frmEstructuraDeDatos_Cola";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura De Datos: Cola";
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.gbElementoEliminado.ResumeLayout(false);

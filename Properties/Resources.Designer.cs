@@ -99,5 +99,15 @@ namespace pryEstructuraDeDatos.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1046046242_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1046046242-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

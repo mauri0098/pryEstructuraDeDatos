@@ -16,5 +16,39 @@ namespace pryEstructuraDeDatos
         {
             InitializeComponent();
         }
+        clsCola fila = new clsCola();
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodo obj = new clsNodo();
+            obj.Codigo = Convert.ToInt32(txtCodigo.Text);
+            obj.Nombre = txtNombre.Text;
+            obj.Tramite = txtTramite.Text;
+            fila.Agregar(obj);
+            fila.Recorrer(dgvGrilla);
+            fila.Recorrer(lstCola);
+            fila.Recorrer();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (fila.Primero != null)
+            {
+                lblCodigo.Text = fila.Primero.Codigo.ToString();
+                lblNombre2.Text = fila.Primero.Nombre;
+                lblTramite.Text = fila.Primero.Tramite;
+                fila.Eliminar();
+                fila.Recorrer(dgvGrilla);
+                fila.Recorrer();
+
+
+            }
+            else
+            {
+                txtCodigo.Text = "";//que limpia esto preguntar 
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+
+            }
+        }
     }
 }

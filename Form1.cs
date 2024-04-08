@@ -28,5 +28,11 @@ namespace pryEstructuraDeDatos
             alumnos.ShowDialog();
 
         }
+
+        private void colaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstructuraDeDatos_Cola cola = new frmEstructuraDeDatos_Cola();
+            cola.ShowDialog();
+        }
     }
 }

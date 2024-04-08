@@ -48,14 +48,14 @@
             this.lblTramite = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbListado = new System.Windows.Forms.GroupBox();
             this.lstCola = new System.Windows.Forms.ListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.gbElementoEliminado.SuspendLayout();
             this.gbNuevoElemento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbListado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvGrilla
@@ -94,9 +94,9 @@
             this.gbElementoEliminado.Controls.Add(this.lblTramite2);
             this.gbElementoEliminado.Controls.Add(this.lblNombre2);
             this.gbElementoEliminado.Controls.Add(this.lblCodigo2);
-            this.gbElementoEliminado.Location = new System.Drawing.Point(470, 12);
+            this.gbElementoEliminado.Location = new System.Drawing.Point(470, 5);
             this.gbElementoEliminado.Name = "gbElementoEliminado";
-            this.gbElementoEliminado.Size = new System.Drawing.Size(212, 217);
+            this.gbElementoEliminado.Size = new System.Drawing.Size(212, 227);
             this.gbElementoEliminado.TabIndex = 12;
             this.gbElementoEliminado.TabStop = false;
             this.gbElementoEliminado.Text = "Elemento Eliminado";
@@ -168,9 +168,9 @@
             this.gbNuevoElemento.Controls.Add(this.lblTramite);
             this.gbNuevoElemento.Controls.Add(this.lblNombre);
             this.gbNuevoElemento.Controls.Add(this.lblCodigo);
-            this.gbNuevoElemento.Location = new System.Drawing.Point(245, 12);
+            this.gbNuevoElemento.Location = new System.Drawing.Point(245, 5);
             this.gbNuevoElemento.Name = "gbNuevoElemento";
-            this.gbNuevoElemento.Size = new System.Drawing.Size(219, 217);
+            this.gbNuevoElemento.Size = new System.Drawing.Size(219, 227);
             this.gbNuevoElemento.TabIndex = 13;
             this.gbNuevoElemento.TabStop = false;
             this.gbNuevoElemento.Text = "Nuevo Elemento";
@@ -233,14 +233,6 @@
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(9, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(230, 220);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
             // gbListado
             // 
             this.gbListado.Controls.Add(this.lstCola);
@@ -260,6 +252,16 @@
             this.lstCola.Size = new System.Drawing.Size(224, 186);
             this.lstCola.TabIndex = 15;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::pryEstructuraDeDatos.Properties.Resources.b10;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(230, 227);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmEstructuraDeDatos_Cola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -276,8 +278,8 @@
             this.gbElementoEliminado.PerformLayout();
             this.gbNuevoElemento.ResumeLayout(false);
             this.gbNuevoElemento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbListado.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

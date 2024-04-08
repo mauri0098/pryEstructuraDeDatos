@@ -63,6 +63,16 @@ namespace pryEstructuraDeDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap b10 {
+            get {
+                object obj = ResourceManager.GetObject("b10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IMG_20211231_223131032_HDR {
             get {
                 object obj = ResourceManager.GetObject("IMG_20211231_223131032_HDR", resourceCulture);

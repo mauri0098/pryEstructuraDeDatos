@@ -31,8 +31,14 @@ namespace pryEstructuraDeDatos
 
         private void colaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstructuraDeDatos_Cola cola = new frmEstructuraDeDatos_Cola();
-            cola.ShowDialog();
+            frmEstructuraDeDatos_Cola Cola = new frmEstructuraDeDatos_Cola();
+            Cola.ShowDialog();
+        }
+
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstructuraDeDatos_Pila Pila = new frmEstructuraDeDatos_Pila();
+            Pila.ShowDialog();
         }
     }
 }

@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="clsCola.cs" />
     <Compile Include="clsNodo.cs" />
+    <Compile Include="clsPila.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +67,12 @@
     <Compile Include="frmEstructuraDeDatos_Cola.Designer.cs">
       <DependentUpon>frmEstructuraDeDatos_Cola.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEstructuraDeDatos_Pila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstructuraDeDatos_Pila.Designer.cs">
+      <DependentUpon>frmEstructuraDeDatos_Pila.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -76,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEstructuraDeDatos_Cola.resx">
       <DependentUpon>frmEstructuraDeDatos_Cola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstructuraDeDatos_Pila.resx">
+      <DependentUpon>frmEstructuraDeDatos_Pila.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\istockphoto-1046046242-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pila2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

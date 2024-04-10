@@ -35,7 +35,7 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TRAMITE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbElementoEliminar = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbEliminar = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodigo2 = new System.Windows.Forms.Label();
             this.gbNuevoElemento = new System.Windows.Forms.GroupBox();
@@ -80,7 +80,7 @@
             this.CODIGO,
             this.Nombre,
             this.TRAMITE});
-            this.dgvGrilla.Location = new System.Drawing.Point(236, 19);
+            this.dgvGrilla.Location = new System.Drawing.Point(236, 18);
             this.dgvGrilla.Name = "dgvGrilla";
             this.dgvGrilla.Size = new System.Drawing.Size(427, 186);
             this.dgvGrilla.TabIndex = 14;
@@ -102,7 +102,7 @@
             // 
             // gbElementoEliminar
             // 
-            this.gbElementoEliminar.Controls.Add(this.comboBox1);
+            this.gbElementoEliminar.Controls.Add(this.cbEliminar);
             this.gbElementoEliminar.Controls.Add(this.btnEliminar);
             this.gbElementoEliminar.Controls.Add(this.lblCodigo2);
             this.gbElementoEliminar.Location = new System.Drawing.Point(461, 9);
@@ -112,13 +112,13 @@
             this.gbElementoEliminar.TabStop = false;
             this.gbElementoEliminar.Text = "Elemento a eliminar";
             // 
-            // comboBox1
+            // cbEliminar
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(75, 116);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(115, 21);
-            this.comboBox1.TabIndex = 10;
+            this.cbEliminar.FormattingEnabled = true;
+            this.cbEliminar.Location = new System.Drawing.Point(75, 116);
+            this.cbEliminar.Name = "cbEliminar";
+            this.cbEliminar.Size = new System.Drawing.Size(115, 21);
+            this.cbEliminar.TabIndex = 10;
             // 
             // btnEliminar
             // 
@@ -128,6 +128,7 @@
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblCodigo2
             // 
@@ -162,6 +163,7 @@
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTramite
             // 
@@ -233,6 +235,7 @@
             this.Name = "frmEstructuraDeDatos_ListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura De Datos_Lista Simple";
+            this.Load += new System.EventHandler(this.frmEstructuraDeDatos_ListaSimple_Load);
             this.gbListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.gbElementoEliminar.ResumeLayout(false);
@@ -261,7 +264,7 @@
         private System.Windows.Forms.Label lblTramite;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn TRAMITE;

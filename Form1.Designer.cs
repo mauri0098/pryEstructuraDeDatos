@@ -97,28 +97,28 @@
             // colaToolStripMenuItem
             // 
             this.colaToolStripMenuItem.Name = "colaToolStripMenuItem";
-            this.colaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.colaToolStripMenuItem.Text = "Cola..";
             this.colaToolStripMenuItem.Click += new System.EventHandler(this.colaToolStripMenuItem_Click);
             // 
             // pilaToolStripMenuItem
             // 
             this.pilaToolStripMenuItem.Name = "pilaToolStripMenuItem";
-            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.pilaToolStripMenuItem.Text = "Pila..";
             this.pilaToolStripMenuItem.Click += new System.EventHandler(this.pilaToolStripMenuItem_Click);
             // 
             // listaSimpleToolStripMenuItem
             // 
             this.listaSimpleToolStripMenuItem.Name = "listaSimpleToolStripMenuItem";
-            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.listaSimpleToolStripMenuItem.Text = "Lista Simple..";
             this.listaSimpleToolStripMenuItem.Click += new System.EventHandler(this.listaSimpleToolStripMenuItem_Click);
             // 
             // listaDespleToolStripMenuItem
             // 
             this.listaDespleToolStripMenuItem.Name = "listaDespleToolStripMenuItem";
-            this.listaDespleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaDespleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.listaDespleToolStripMenuItem.Text = "Lista Desple..";
             // 
             // estructurasNoLinialesToolStripMenuItem
@@ -185,6 +185,7 @@
             this.Name = "frmEstructurasDeDatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructuras De Datos";
+            this.Load += new System.EventHandler(this.frmEstructurasDeDatos_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

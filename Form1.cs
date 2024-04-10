@@ -46,5 +46,10 @@ namespace pryEstructuraDeDatos
             frmEstructuraDeDatos_ListaSimple ListaSimple = new frmEstructuraDeDatos_ListaSimple();
             ListaSimple.ShowDialog();
         }
+
+        private void frmEstructurasDeDatos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

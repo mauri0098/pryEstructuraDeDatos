@@ -40,5 +40,11 @@ namespace pryEstructuraDeDatos
             frmEstructuraDeDatos_Pila Pila = new frmEstructuraDeDatos_Pila();
             Pila.ShowDialog();
         }
+
+        private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstructuraDeDatos_ListaSimple ListaSimple = new frmEstructuraDeDatos_ListaSimple();
+            ListaSimple.ShowDialog();
+        }
     }
 }

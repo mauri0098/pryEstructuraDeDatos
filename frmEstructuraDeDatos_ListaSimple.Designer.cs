@@ -31,7 +31,11 @@
             this.gbListado = new System.Windows.Forms.GroupBox();
             this.lst = new System.Windows.Forms.ListBox();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
+            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRAMITE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbElementoEliminar = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodigo2 = new System.Windows.Forms.Label();
             this.gbNuevoElemento = new System.Windows.Forms.GroupBox();
@@ -42,10 +46,6 @@
             this.lblTramite = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TRAMITE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
@@ -85,6 +85,21 @@
             this.dgvGrilla.Size = new System.Drawing.Size(427, 186);
             this.dgvGrilla.TabIndex = 14;
             // 
+            // CODIGO
+            // 
+            this.CODIGO.HeaderText = "código";
+            this.CODIGO.Name = "CODIGO";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // TRAMITE
+            // 
+            this.TRAMITE.HeaderText = "Tramite";
+            this.TRAMITE.Name = "TRAMITE";
+            // 
             // gbElementoEliminar
             // 
             this.gbElementoEliminar.Controls.Add(this.comboBox1);
@@ -96,6 +111,14 @@
             this.gbElementoEliminar.TabIndex = 17;
             this.gbElementoEliminar.TabStop = false;
             this.gbElementoEliminar.Text = "Elemento a eliminar";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(75, 116);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(115, 21);
+            this.comboBox1.TabIndex = 10;
             // 
             // btnEliminar
             // 
@@ -187,29 +210,6 @@
             this.lblCodigo.Size = new System.Drawing.Size(43, 13);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(75, 116);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(115, 21);
-            this.comboBox1.TabIndex = 10;
-            // 
-            // CODIGO
-            // 
-            this.CODIGO.HeaderText = "código";
-            this.CODIGO.Name = "CODIGO";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // TRAMITE
-            // 
-            this.TRAMITE.HeaderText = "Tramite";
-            this.TRAMITE.Name = "TRAMITE";
             // 
             // pictureBox1
             // 

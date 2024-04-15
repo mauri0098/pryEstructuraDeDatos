@@ -51,5 +51,11 @@ namespace pryEstructuraDeDatos
         {
 
         }
+
+        private void listaDespleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstructuraDeDatos_ListaDoble listaDoble  = new frmEstructuraDeDatos_ListaDoble();
+            listaDoble.ShowDialog();    
+        }
     }
 }

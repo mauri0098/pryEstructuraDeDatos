@@ -35,6 +35,9 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TRAMITE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbElementoEliminar = new System.Windows.Forms.GroupBox();
+            this.gbListarDatos = new System.Windows.Forms.GroupBox();
+            this.rdDesendente = new System.Windows.Forms.RadioButton();
+            this.rdAsendente = new System.Windows.Forms.RadioButton();
             this.cbEliminar = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodigo2 = new System.Windows.Forms.Label();
@@ -46,16 +49,12 @@
             this.lblTramite = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.gbListarDatos = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.rdAsendente = new System.Windows.Forms.RadioButton();
-            this.rdDesendente = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.gbElementoEliminar.SuspendLayout();
-            this.gbNuevoElemento.SuspendLayout();
             this.gbListarDatos.SuspendLayout();
+            this.gbNuevoElemento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,8 +117,42 @@
             this.gbElementoEliminar.TabStop = false;
             this.gbElementoEliminar.Text = "Elemento a eliminar";
             // 
+            // gbListarDatos
+            // 
+            this.gbListarDatos.Controls.Add(this.rdDesendente);
+            this.gbListarDatos.Controls.Add(this.rdAsendente);
+            this.gbListarDatos.Location = new System.Drawing.Point(6, 121);
+            this.gbListarDatos.Name = "gbListarDatos";
+            this.gbListarDatos.Size = new System.Drawing.Size(196, 100);
+            this.gbListarDatos.TabIndex = 11;
+            this.gbListarDatos.TabStop = false;
+            this.gbListarDatos.Text = "Listar Datos";
+            // 
+            // rdDesendente
+            // 
+            this.rdDesendente.AutoSize = true;
+            this.rdDesendente.Location = new System.Drawing.Point(6, 45);
+            this.rdDesendente.Name = "rdDesendente";
+            this.rdDesendente.Size = new System.Drawing.Size(83, 17);
+            this.rdDesendente.TabIndex = 1;
+            this.rdDesendente.TabStop = true;
+            this.rdDesendente.Text = "Desendente";
+            this.rdDesendente.UseVisualStyleBackColor = true;
+            // 
+            // rdAsendente
+            // 
+            this.rdAsendente.AutoSize = true;
+            this.rdAsendente.Location = new System.Drawing.Point(6, 19);
+            this.rdAsendente.Name = "rdAsendente";
+            this.rdAsendente.Size = new System.Drawing.Size(76, 17);
+            this.rdAsendente.TabIndex = 0;
+            this.rdAsendente.TabStop = true;
+            this.rdAsendente.Text = "Asendente";
+            this.rdAsendente.UseVisualStyleBackColor = true;
+            // 
             // cbEliminar
             // 
+            this.cbEliminar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEliminar.FormattingEnabled = true;
             this.cbEliminar.Location = new System.Drawing.Point(75, 26);
             this.cbEliminar.Name = "cbEliminar";
@@ -168,6 +201,7 @@
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTramite
             // 
@@ -217,39 +251,6 @@
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código:";
             // 
-            // gbListarDatos
-            // 
-            this.gbListarDatos.Controls.Add(this.rdDesendente);
-            this.gbListarDatos.Controls.Add(this.rdAsendente);
-            this.gbListarDatos.Location = new System.Drawing.Point(6, 121);
-            this.gbListarDatos.Name = "gbListarDatos";
-            this.gbListarDatos.Size = new System.Drawing.Size(196, 100);
-            this.gbListarDatos.TabIndex = 11;
-            this.gbListarDatos.TabStop = false;
-            this.gbListarDatos.Text = "Listar Datos";
-            // 
-            // rdAsendente
-            // 
-            this.rdAsendente.AutoSize = true;
-            this.rdAsendente.Location = new System.Drawing.Point(6, 19);
-            this.rdAsendente.Name = "rdAsendente";
-            this.rdAsendente.Size = new System.Drawing.Size(76, 17);
-            this.rdAsendente.TabIndex = 0;
-            this.rdAsendente.TabStop = true;
-            this.rdAsendente.Text = "Asendente";
-            this.rdAsendente.UseVisualStyleBackColor = true;
-            // 
-            // rdDesendente
-            // 
-            this.rdDesendente.AutoSize = true;
-            this.rdDesendente.Location = new System.Drawing.Point(6, 45);
-            this.rdDesendente.Name = "rdDesendente";
-            this.rdDesendente.Size = new System.Drawing.Size(83, 17);
-            this.rdDesendente.TabIndex = 1;
-            this.rdDesendente.TabStop = true;
-            this.rdDesendente.Text = "Desendente";
-            this.rdDesendente.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::pryEstructuraDeDatos.Properties.Resources._0_F7Qnr7Zs_dobles_s_;
@@ -275,10 +276,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.gbElementoEliminar.ResumeLayout(false);
             this.gbElementoEliminar.PerformLayout();
-            this.gbNuevoElemento.ResumeLayout(false);
-            this.gbNuevoElemento.PerformLayout();
             this.gbListarDatos.ResumeLayout(false);
             this.gbListarDatos.PerformLayout();
+            this.gbNuevoElemento.ResumeLayout(false);
+            this.gbNuevoElemento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -308,6 +309,5 @@
         private System.Windows.Forms.GroupBox gbListarDatos;
         private System.Windows.Forms.RadioButton rdDesendente;
         private System.Windows.Forms.RadioButton rdAsendente;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

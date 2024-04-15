@@ -114,6 +114,7 @@
             // 
             // cbEliminar
             // 
+            this.cbEliminar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEliminar.FormattingEnabled = true;
             this.cbEliminar.Location = new System.Drawing.Point(75, 116);
             this.cbEliminar.Name = "cbEliminar";

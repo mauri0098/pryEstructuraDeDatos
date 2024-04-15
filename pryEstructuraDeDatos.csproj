@@ -68,6 +68,12 @@
     <Compile Include="frmEstructuraDeDatos_Cola.Designer.cs">
       <DependentUpon>frmEstructuraDeDatos_Cola.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEstructuraDeDatos_ListaDoble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstructuraDeDatos_ListaDoble.Designer.cs">
+      <DependentUpon>frmEstructuraDeDatos_ListaDoble.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEstructuraDeDatos_ListaSimple.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEstructuraDeDatos_Cola.resx">
       <DependentUpon>frmEstructuraDeDatos_Cola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstructuraDeDatos_ListaDoble.resx">
+      <DependentUpon>frmEstructuraDeDatos_ListaDoble.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEstructuraDeDatos_ListaSimple.resx">
       <DependentUpon>frmEstructuraDeDatos_ListaSimple.cs</DependentUpon>
@@ -140,6 +149,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\images %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0-F7Qnr7Zs-dobles-s-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0-F7Qnr7Zs-dobles-s- %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

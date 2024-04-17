@@ -42,8 +42,10 @@ namespace pryEstructuraDeDatos
                 listaDoble.RecorrerDes(cbEliminar);
                 listaDoble.RecorrerDes();
             }
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
 
-            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

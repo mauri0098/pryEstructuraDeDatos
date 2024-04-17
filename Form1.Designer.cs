@@ -57,7 +57,7 @@
             this.baseDeDatosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(621, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(719, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -118,7 +118,7 @@
             // listaDespleToolStripMenuItem
             // 
             this.listaDespleToolStripMenuItem.Name = "listaDespleToolStripMenuItem";
-            this.listaDespleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaDespleToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.listaDespleToolStripMenuItem.Text = "Lista Desple..";
             this.listaDespleToolStripMenuItem.Click += new System.EventHandler(this.listaDespleToolStripMenuItem_Click);
             // 
@@ -167,11 +167,12 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::pryEstructuraDeDatos.Properties.Resources.istockphoto_1046046242_612x612;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(612, 408);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.Size = new System.Drawing.Size(719, 434);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -179,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 446);
+            this.ClientSize = new System.Drawing.Size(719, 458);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

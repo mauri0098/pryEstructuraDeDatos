@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.gbListado = new System.Windows.Forms.GroupBox();
-            this.lst = new System.Windows.Forms.ListBox();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +49,7 @@
             this.rbInOrden = new System.Windows.Forms.RadioButton();
             this.rdPreOrden = new System.Windows.Forms.RadioButton();
             this.rdPostOrden = new System.Windows.Forms.RadioButton();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.gbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.gbElementoEliminar.SuspendLayout();
@@ -69,14 +69,6 @@
             this.gbListado.TabStop = false;
             this.gbListado.Text = "Listado del arból";
             // 
-            // lst
-            // 
-            this.lst.FormattingEnabled = true;
-            this.lst.Location = new System.Drawing.Point(6, 12);
-            this.lst.Name = "lst";
-            this.lst.Size = new System.Drawing.Size(224, 212);
-            this.lst.TabIndex = 15;
-            // 
             // dgvGrilla
             // 
             this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -84,7 +76,7 @@
             this.CODIGO,
             this.Nombre,
             this.TRAMITE});
-            this.dgvGrilla.Location = new System.Drawing.Point(236, 16);
+            this.dgvGrilla.Location = new System.Drawing.Point(236, 18);
             this.dgvGrilla.Name = "dgvGrilla";
             this.dgvGrilla.Size = new System.Drawing.Size(427, 186);
             this.dgvGrilla.TabIndex = 14;
@@ -258,12 +250,19 @@
             this.rdPostOrden.Text = "Post-Orden";
             this.rdPostOrden.UseVisualStyleBackColor = true;
             // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(6, 5);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(230, 234);
+            this.treeView1.TabIndex = 28;
+            // 
             // frmEstructuraDeDatos_ArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 459);
-            this.Controls.Add(this.lst);
+            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.btnEquilibrar);
             this.Controls.Add(this.gbListado);
             this.Controls.Add(this.gbElementoEliminar);
@@ -288,7 +287,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn TRAMITE;
-        private System.Windows.Forms.ListBox lst;
         private System.Windows.Forms.GroupBox gbElementoEliminar;
         private System.Windows.Forms.ComboBox cbEliminar;
         private System.Windows.Forms.Button btnEliminar;
@@ -305,5 +303,6 @@
         private System.Windows.Forms.RadioButton rbInOrden;
         private System.Windows.Forms.RadioButton rdPreOrden;
         private System.Windows.Forms.RadioButton rdPostOrden;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }

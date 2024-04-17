@@ -64,6 +64,12 @@
     <Compile Include="frmDatosDeAlumnos.Designer.cs">
       <DependentUpon>frmDatosDeAlumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEstructuraDeDatos_ArbolBinario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstructuraDeDatos_ArbolBinario.Designer.cs">
+      <DependentUpon>frmEstructuraDeDatos_ArbolBinario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEstructuraDeDatos_Cola.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDatosDeAlumnos.resx">
       <DependentUpon>frmDatosDeAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstructuraDeDatos_ArbolBinario.resx">
+      <DependentUpon>frmEstructuraDeDatos_ArbolBinario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEstructuraDeDatos_Cola.resx">
       <DependentUpon>frmEstructuraDeDatos_Cola.cs</DependentUpon>

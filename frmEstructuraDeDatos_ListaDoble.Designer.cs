@@ -274,6 +274,7 @@
             this.Controls.Add(this.gbElementoEliminar);
             this.Controls.Add(this.gbNuevoElemento);
             this.Name = "frmEstructuraDeDatos_ListaDoble";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura De Datos_ListaDoble";
             this.Load += new System.EventHandler(this.frmEstructuraDeDatos_ListaDoble_Load);
             this.gbListado.ResumeLayout(false);

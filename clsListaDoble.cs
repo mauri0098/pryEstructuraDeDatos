@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,14 +32,13 @@ namespace pryEstructuraDeDatos
             if (Primero == null)
             {
                 Primero = Nuevo;
-                ult = Nuevo;
-
+                Ultimo = Nuevo;
             }
             else
             {
                 if (Nuevo.Codigo < Primero.Codigo)
                 {
-                    Nuevo.Siguiente = Nuevo;
+                    Nuevo.Siguiente = Primero;
                     Primero.Anterior = Nuevo;
                     Primero = Nuevo;
                 }
@@ -58,7 +58,6 @@ namespace pryEstructuraDeDatos
                         {
                             Ant = Aux;
                             Aux = Aux.Siguiente;
-                            
                         }
                         Ant.Siguiente = Nuevo;
                         Nuevo.Siguiente = Aux;
@@ -66,34 +65,64 @@ namespace pryEstructuraDeDatos
                         Nuevo.Anterior = Ant;
                     }
                 }
-                
-
             }
-           
-
         }
-        
-
-
-
-
-        
-        
-        
-        
-        public void Recorer(DataGridView Grilla)
+        public void Recorrer(DataGridView Grilla)
         {
-            clsNodo aux = Ultimo;
+            clsNodo aux = Primero;
             Grilla.Rows.Clear();
             while (aux != null)
             {
                 Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
-                aux = aux.Anterior;
+                aux = aux.Siguiente;
 
             }
 
 
         }
+        public void Recorrer(ListBox Lista)
+        {
+            clsNodo aux = Primero;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.Codigo);
+                aux = aux.Siguiente;
+
+
+
+            }
+        }
+        public void Recorrer(ComboBox Combo)
+        {
+            clsNodo aux = Primero;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Codigo);
+                aux = aux.Siguiente;
+            }
+        }
+        public void Recorrer()
+        {
+            clsNodo aux = Primero;
+            StreamWriter AD = new StreamWriter("Pila.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista De Espera/n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            while (aux != null)
+            {
+                AD.WriteLine(aux.Codigo);
+                AD.WriteLine(";");
+                AD.WriteLine(aux.Nombre);
+                AD.WriteLine(";");
+                AD.WriteLine(aux.Tramite);
+                aux = aux.Siguiente;
+            }
+            AD.Close();
+        }
+
+
+
         public void Eliminar(Int32 Codigo)
         {
             if (Primero.Codigo == Codigo && Ultimo == Primero)
@@ -144,5 +173,57 @@ namespace pryEstructuraDeDatos
 
         }
         
+        public void RecorrerDes(DataGridView Grilla)//recorer desendiente 
+        {
+            clsNodo aux = Ultimo;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Anterior;
+            }
+
+        }
+        public void RecorrerDes(ListBox lista)
+        {
+            clsNodo Aux = Ultimo;
+            lista.Items.Clear();
+            while (Aux != null)
+            {
+                lista.Items.Add(Aux.Codigo);
+                Aux = Aux.Anterior;
+            }
+
+        }
+        public void RecorrerDes(ComboBox combo)
+        {
+            clsNodo Aux = Ultimo;
+            combo.Items.Clear();
+            while (Aux != null)
+            {
+                combo.Items.Add(Aux.Nombre);
+                Aux = Aux.Anterior;
+            }
+
+        }
+        public void RecorrerDes()
+        {
+            clsNodo Aux = Ultimo;
+            StreamWriter AD = new StreamWriter("doble", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Código;Nombre,Tramite");
+            while (Aux != null)
+            {
+                AD.Write(Aux.Codigo);
+                AD.Write(";");
+                AD.Write(Aux.Nombre);
+                AD.Write(";");
+                AD.WriteLine(Aux.Tramite);
+                Aux = Aux.Anterior;
+            }
+            AD.Close();
+
+        }
     }
 }
+

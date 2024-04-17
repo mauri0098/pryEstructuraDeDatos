@@ -138,6 +138,7 @@
             this.rdDesendente.TabStop = true;
             this.rdDesendente.Text = "Desendente";
             this.rdDesendente.UseVisualStyleBackColor = true;
+            this.rdDesendente.CheckedChanged += new System.EventHandler(this.rdDesendente_CheckedChanged);
             // 
             // rdAsendente
             // 
@@ -149,6 +150,7 @@
             this.rdAsendente.TabStop = true;
             this.rdAsendente.Text = "Asendente";
             this.rdAsendente.UseVisualStyleBackColor = true;
+            this.rdAsendente.CheckedChanged += new System.EventHandler(this.rdAsendente_CheckedChanged);
             // 
             // cbEliminar
             // 
@@ -167,6 +169,7 @@
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblCodigo2
             // 
@@ -272,6 +275,7 @@
             this.Controls.Add(this.gbNuevoElemento);
             this.Name = "frmEstructuraDeDatos_ListaDoble";
             this.Text = "Estructura De Datos_ListaDoble";
+            this.Load += new System.EventHandler(this.frmEstructuraDeDatos_ListaDoble_Load);
             this.gbListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.gbElementoEliminar.ResumeLayout(false);

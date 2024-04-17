@@ -20,32 +20,83 @@ namespace pryEstructuraDeDatos
         private void btnAgregar_Click(object sender, EventArgs e)
         {
 
-            clsNodo obj = new clsNodo();
-            obj.Codigo = Convert.ToInt32(txtCodigo.Text);
-            obj.Nombre = txtNombre.Text;
-            obj.Tramite = txtTramite.Text;
-
-            // Determine order based on radio button
-            if (rdAsendente.Checked)
+            int codigo = Convert.ToInt32(txtCodigo.Text);
+            clsNodo Obj = new clsNodo();
+            Obj.Codigo = codigo;
+            Obj.Nombre = txtNombre.Text;
+            Obj.Tramite = txtTramite.Text;
+            listaDoble.Agregar(Obj);
+            if (rdAsendente.Checked == true)
             {
-                listaDoble.Agregar(obj); // Add in ascending order
+                
+                listaDoble.Recorrer(dgvGrilla);
+                listaDoble.Recorrer(lst);
+                listaDoble.Recorrer(cbEliminar);
+                listaDoble.Recorrer();
             }
-            else if (rdDesendente.Checked)
+            if (rdDesendente.Checked==true)
             {
-                listaDoble.Agregar(obj); // Add in descending order (assuming you have a method for this)
+               
+                listaDoble.RecorrerDes(dgvGrilla);
+                listaDoble.RecorrerDes(lst);
+                listaDoble.RecorrerDes(cbEliminar);
+                listaDoble.RecorrerDes();
             }
 
-            listaDoble.Recorer(dgvGrilla); // Update DataGridView
+            
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (listaDoble.Primero != null)
+            {
+                Int32 x = Convert.ToInt32(cbEliminar.Text);
+                listaDoble.Eliminar(x);
+                listaDoble.Recorrer(dgvGrilla);
+                listaDoble.Recorrer(lst);
+                listaDoble.Recorrer(cbEliminar);
+                listaDoble.Recorrer();
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un dato");
+            }
+
+        }
+
+        private void rdAsendente_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (rdAsendente.Checked == true)
+            {
+                listaDoble.Recorrer(dgvGrilla);
+                listaDoble.Recorrer(lst);
+                listaDoble.Recorrer(cbEliminar);
+                listaDoble.Recorrer();
+            }
 
 
+        }
+
+        private void rdDesendente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdDesendente.Checked == true)
+            {
+                listaDoble.RecorrerDes(dgvGrilla);
+                listaDoble.RecorrerDes(lst);
+                listaDoble.RecorrerDes(cbEliminar);
+                listaDoble.RecorrerDes();
+            }
+           
 
 
+        }
 
-
-
-
+        private void frmEstructuraDeDatos_ListaDoble_Load(object sender, EventArgs e)
+        {
+            rdAsendente.Checked = true;
+        }
     }
     
 }

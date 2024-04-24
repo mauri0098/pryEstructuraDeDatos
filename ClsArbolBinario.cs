@@ -24,9 +24,6 @@ namespace pryEstructuraDeDatos
             if (Raiz == null)
             {
                 Raiz = Nuevo;
-
-
-
             }
             else
             {
@@ -62,11 +59,6 @@ namespace pryEstructuraDeDatos
 
 
             }           
-            
-        
-        
-  
-        
         }
         public void Recorrer(ComboBox Lista)
         {
@@ -102,7 +94,7 @@ namespace pryEstructuraDeDatos
                 inOrden(Grilla, Raiz.Izquierdo);
 
             }
-            Grilla.Rows.Add(Raiz.Codigo);
+            Grilla.Rows.Add(Raiz.Codigo , Raiz.Nombre, Raiz.Tramite);
             if (Raiz.Derecho != null)
             {
                 inOrden(Grilla, Raiz.Derecho);
@@ -139,6 +131,32 @@ namespace pryEstructuraDeDatos
 
             }
 
+        }
+        public void PreOrden(clsNodo Raiz, DataGridView Grilla)
+        {
+
+            Grilla.Rows.Add(Grilla);
+            if (Raiz.Izquierdo != null)
+            {
+                PreOrden(Raiz.Izquierdo, Grilla);
+            }
+            if (Raiz.Derecho != null)
+            {
+                PreOrden(Raiz.Derecho, Grilla);
+            }
+        }
+        public void PostOrden(clsNodo Raiz, DataGridView Grilla)
+        {
+
+            if (Raiz.Izquierdo != null)
+            {
+                PostOrden(Raiz.Izquierdo, Grilla);
+            }
+            if (Raiz.Derecho != null)
+            {
+                PostOrden(Raiz.Derecho,Grilla);
+            }
+            Grilla.Rows.Add(Grilla);
         }
 
     }

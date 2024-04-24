@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.gbListado = new System.Windows.Forms.GroupBox();
+            this.rbInOrden = new System.Windows.Forms.RadioButton();
+            this.rdPreOrden = new System.Windows.Forms.RadioButton();
+            this.rdPostOrden = new System.Windows.Forms.RadioButton();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,9 +49,6 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnEquilibrar = new System.Windows.Forms.Button();
-            this.rbInOrden = new System.Windows.Forms.RadioButton();
-            this.rdPreOrden = new System.Windows.Forms.RadioButton();
-            this.rdPostOrden = new System.Windows.Forms.RadioButton();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.gbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
@@ -68,6 +68,39 @@
             this.gbListado.TabIndex = 20;
             this.gbListado.TabStop = false;
             this.gbListado.Text = "Listado del arból";
+            // 
+            // rbInOrden
+            // 
+            this.rbInOrden.AutoSize = true;
+            this.rbInOrden.Location = new System.Drawing.Point(14, 35);
+            this.rbInOrden.Name = "rbInOrden";
+            this.rbInOrden.Size = new System.Drawing.Size(66, 17);
+            this.rbInOrden.TabIndex = 25;
+            this.rbInOrden.TabStop = true;
+            this.rbInOrden.Text = "In-Orden";
+            this.rbInOrden.UseVisualStyleBackColor = true;
+            // 
+            // rdPreOrden
+            // 
+            this.rdPreOrden.AutoSize = true;
+            this.rdPreOrden.Location = new System.Drawing.Point(14, 74);
+            this.rdPreOrden.Name = "rdPreOrden";
+            this.rdPreOrden.Size = new System.Drawing.Size(73, 17);
+            this.rdPreOrden.TabIndex = 26;
+            this.rdPreOrden.TabStop = true;
+            this.rdPreOrden.Text = "Pre-Orden";
+            this.rdPreOrden.UseVisualStyleBackColor = true;
+            // 
+            // rdPostOrden
+            // 
+            this.rdPostOrden.AutoSize = true;
+            this.rdPostOrden.Location = new System.Drawing.Point(14, 114);
+            this.rdPostOrden.Name = "rdPostOrden";
+            this.rdPostOrden.Size = new System.Drawing.Size(78, 17);
+            this.rdPostOrden.TabIndex = 27;
+            this.rdPostOrden.TabStop = true;
+            this.rdPostOrden.Text = "Post-Orden";
+            this.rdPostOrden.UseVisualStyleBackColor = true;
             // 
             // dgvGrilla
             // 
@@ -159,6 +192,7 @@
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtTramite
             // 
@@ -216,39 +250,6 @@
             this.btnEquilibrar.TabIndex = 24;
             this.btnEquilibrar.Text = "Equilibrar";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
-            // 
-            // rbInOrden
-            // 
-            this.rbInOrden.AutoSize = true;
-            this.rbInOrden.Location = new System.Drawing.Point(14, 35);
-            this.rbInOrden.Name = "rbInOrden";
-            this.rbInOrden.Size = new System.Drawing.Size(66, 17);
-            this.rbInOrden.TabIndex = 25;
-            this.rbInOrden.TabStop = true;
-            this.rbInOrden.Text = "In-Orden";
-            this.rbInOrden.UseVisualStyleBackColor = true;
-            // 
-            // rdPreOrden
-            // 
-            this.rdPreOrden.AutoSize = true;
-            this.rdPreOrden.Location = new System.Drawing.Point(14, 74);
-            this.rdPreOrden.Name = "rdPreOrden";
-            this.rdPreOrden.Size = new System.Drawing.Size(73, 17);
-            this.rdPreOrden.TabIndex = 26;
-            this.rdPreOrden.TabStop = true;
-            this.rdPreOrden.Text = "Pre-Orden";
-            this.rdPreOrden.UseVisualStyleBackColor = true;
-            // 
-            // rdPostOrden
-            // 
-            this.rdPostOrden.AutoSize = true;
-            this.rdPostOrden.Location = new System.Drawing.Point(14, 114);
-            this.rdPostOrden.Name = "rdPostOrden";
-            this.rdPostOrden.Size = new System.Drawing.Size(78, 17);
-            this.rdPostOrden.TabIndex = 27;
-            this.rdPostOrden.TabStop = true;
-            this.rdPostOrden.Text = "Post-Orden";
-            this.rdPostOrden.UseVisualStyleBackColor = true;
             // 
             // treeView1
             // 

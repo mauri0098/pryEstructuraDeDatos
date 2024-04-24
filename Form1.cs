@@ -54,8 +54,14 @@ namespace pryEstructuraDeDatos
 
         private void listaDespleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstructuraDeDatos_ListaDoble listaDoble  = new frmEstructuraDeDatos_ListaDoble();
-            listaDoble.ShowDialog();    
+            frmEstructuraDeDatos_ListaDoble ListaDoble  = new frmEstructuraDeDatos_ListaDoble();
+            ListaDoble.ShowDialog();    
+        }
+
+        private void arbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstructuraDeDatos_ArbolBinario ArbolBinario = new frmEstructuraDeDatos_ArbolBinario();
+            ArbolBinario.ShowDialog();
         }
     }
 }

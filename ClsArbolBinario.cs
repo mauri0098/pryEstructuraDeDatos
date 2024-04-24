@@ -147,6 +147,28 @@ namespace pryEstructuraDeDatos
         //    }
         //}
         //PRE ORDER
+        public void RecorrerPreOrden(ComboBox Lista)
+        {
+            Lista.Items.Clear();
+            PreOrden(Lista, Raiz);
+        }
+        public void PreOrden(ComboBox Lista, clsNodo Raiz)
+        {
+            Lista.Items.Add(Raiz.Codigo);
+            if (Raiz.Izquierdo != null)
+            {
+                PreOrden(Lista, Raiz.Izquierdo);
+
+            }
+            if (Raiz.Derecho != null)
+            {
+                PreOrden(Lista, Raiz.Derecho);
+
+            }
+
+
+        }
+
         public void PreOrden(clsNodo R, TreeNode NodoTreeView)
         {
             TreeNode NodoPadre = new TreeNode(R.Codigo.ToString());

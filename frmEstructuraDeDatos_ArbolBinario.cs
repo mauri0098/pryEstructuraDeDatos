@@ -53,7 +53,8 @@ namespace pryEstructuraDeDatos
             if (rdPreOrden.Checked == true)
             {
                 Arbol.RecorrerPreOrden(dgvGrilla);
-                Arbol.RecorrerPreOrden(treeView1);
+                Arbol.Recorrer(treeView1);
+                Arbol.RecorrerPreOrden(cbEliminar);
                 Arbol.RecorrerPreOrden();
                
 

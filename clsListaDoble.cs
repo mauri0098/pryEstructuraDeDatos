@@ -165,12 +165,6 @@ namespace pryEstructuraDeDatos
 
             }
 
-
-
-
-
-
-
         }
         
         public void RecorrerDes(DataGridView Grilla)//recorer desendiente 

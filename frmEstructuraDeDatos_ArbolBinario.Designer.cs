@@ -79,6 +79,7 @@
             this.rbInOrden.TabStop = true;
             this.rbInOrden.Text = "In-Orden";
             this.rbInOrden.UseVisualStyleBackColor = true;
+            this.rbInOrden.CheckedChanged += new System.EventHandler(this.rbInOrden_CheckedChanged);
             // 
             // rdPreOrden
             // 
@@ -90,6 +91,7 @@
             this.rdPreOrden.TabStop = true;
             this.rdPreOrden.Text = "Pre-Orden";
             this.rdPreOrden.UseVisualStyleBackColor = true;
+            this.rdPreOrden.CheckedChanged += new System.EventHandler(this.rdPreOrden_CheckedChanged);
             // 
             // rdPostOrden
             // 

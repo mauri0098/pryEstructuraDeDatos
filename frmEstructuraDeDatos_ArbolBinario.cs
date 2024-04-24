@@ -21,33 +21,40 @@ namespace pryEstructuraDeDatos
         {
             clsNodo objNodo = new clsNodo();
             objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
-            objNodo.Nombre = txtNombre.Text;  
-            objNodo.Tramite = txtTramite.Text;  
-           
+            objNodo.Nombre = txtNombre.Text;
+            objNodo.Tramite = txtTramite.Text;
+
             Arbol.Agregar(objNodo);
 
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
+
+            Arbol.Recorrer(dgvGrilla);
+            Arbol.Recorrer(cbEliminar);
+            Arbol.Recorrer(treeView1);
+
+        }
+
+        private void rbInOrden_CheckedChanged(object sender, EventArgs e)
+        {
             if (rbInOrden.Checked == true)
             {
                 Arbol.Recorrer(dgvGrilla);
                 Arbol.Recorrer(cbEliminar);
                 Arbol.Recorrer(treeView1);
+                
             }
+        }
+
+        private void rdPreOrden_CheckedChanged(object sender, EventArgs e)
+        {
             if (rdPreOrden.Checked == true)
             {
                 Arbol.Recorrer(dgvGrilla);
                 Arbol.Recorrer(cbEliminar);
                 Arbol.Recorrer(treeView1);
             }
-            if (rdPostOrden.Checked == true)
-            {
-                Arbol.Recorrer(dgvGrilla);
-                Arbol.Recorrer(cbEliminar);
-                Arbol.Recorrer(treeView1);
-            }
-
         }
     }
 }

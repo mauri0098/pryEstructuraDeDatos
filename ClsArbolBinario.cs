@@ -18,7 +18,8 @@ namespace pryEstructuraDeDatos
 
             set { PrimeroNodo = value; }
         }
-        public void Agregar(clsNodo Nuevo){
+        public void Agregar(clsNodo Nuevo)
+        {
             Nuevo.Izquierdo = null;
             Nuevo.Derecho = null;
             if (Raiz == null)
@@ -27,38 +28,29 @@ namespace pryEstructuraDeDatos
             }
             else
             {
-                clsNodo NodoPadre = Raiz; //ant
+                clsNodo NodoPadre = Raiz;
                 clsNodo Aux = Raiz;
-                while (Aux!= null)
+                while (Aux != null)
                 {
                     NodoPadre = Aux;
                     if (Nuevo.Codigo < Aux.Codigo)
                     {
                         Aux = Aux.Izquierdo;
-
-
-
                     }
                     else
                     {
                         Aux = Aux.Derecho;
                     }
-                    if (Nuevo.Codigo < NodoPadre.Codigo)
-                    {
-                        NodoPadre.Izquierdo = Nuevo;
-
-
-                    }
-                    else
-                    {
-                        NodoPadre.Derecho = Nuevo;
-                    }
                 }
-
-
-
-
-            }           
+                if (Nuevo.Codigo < NodoPadre.Codigo)
+                {
+                    NodoPadre.Izquierdo = Nuevo;
+                }
+                else
+                {
+                    NodoPadre.Derecho = Nuevo;
+                }
+            }
         }
         public void Recorrer(ComboBox Lista)
         {

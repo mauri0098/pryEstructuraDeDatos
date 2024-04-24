@@ -31,8 +31,9 @@ namespace pryEstructuraDeDatos
             txtTramite.Text = "";
 
             Arbol.Recorrer(dgvGrilla);
-            Arbol.Recorrer(cbEliminar);
             Arbol.Recorrer(treeView1);
+           
+
 
         }
 
@@ -42,7 +43,7 @@ namespace pryEstructuraDeDatos
             {
                 Arbol.Recorrer(dgvGrilla);
                 Arbol.Recorrer(cbEliminar);
-                Arbol.Recorrer(treeView1);
+               
                 
             }
         }
@@ -51,9 +52,12 @@ namespace pryEstructuraDeDatos
         {
             if (rdPreOrden.Checked == true)
             {
-                Arbol.Recorrer(dgvGrilla);
-                Arbol.Recorrer(cbEliminar);
-                Arbol.Recorrer(treeView1);
+                Arbol.RecorrerPreOrden(dgvGrilla);
+                Arbol.RecorrerPreOrden(treeView1);
+                Arbol.RecorrerPreOrden();
+               
+
+                
             }
         }
     }

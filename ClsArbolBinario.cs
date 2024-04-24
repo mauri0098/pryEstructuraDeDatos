@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -104,6 +105,7 @@ namespace pryEstructuraDeDatos
             tree.ExpandAll();
             
         }
+        
         public void preOrden(clsNodo Raiz, TreeNode nodoTree)
         {
             TreeNode NodoPadre = new TreeNode(Raiz.Codigo.ToString());
@@ -124,19 +126,79 @@ namespace pryEstructuraDeDatos
             }
 
         }
-        public void PreOrden(clsNodo Raiz, DataGridView Grilla)
-        {
 
-            Grilla.Rows.Add(Grilla);
-            if (Raiz.Izquierdo != null)
+        //public void Recorrer2( DataGridView Grilla)
+        //{
+        //    Grilla.Rows.Clear();
+        //   PreOrdenGrilla(Raiz, Grilla);
+
+        //}
+        //public void PreOrdenGrilla(clsNodo Raiz, DataGridView Grilla)
+        //{
+
+        //    Grilla.Rows.Add(Grilla);
+        //    if (Raiz.Izquierdo != null)
+        //    {
+        //        PreOrdenGrilla(Raiz.Izquierdo, Grilla);
+        //    }
+        //    if (Raiz.Derecho != null)
+        //    {
+        //        PreOrdenGrilla(Raiz.Derecho, Grilla);
+        //    }
+        //}
+        //PRE ORDER
+        public void PreOrden(clsNodo R, TreeNode NodoTreeView)
+        {
+            TreeNode NodoPadre = new TreeNode(R.Codigo.ToString());
+            NodoTreeView.Nodes.Add(NodoPadre);
+            if (R.Izquierdo != null)
             {
-                PreOrden(Raiz.Izquierdo, Grilla);
+                PreOrden(R.Izquierdo, NodoPadre);
             }
-            if (Raiz.Derecho != null)
+            if (R.Derecho != null)
             {
-                PreOrden(Raiz.Derecho, Grilla);
+                PreOrden(R.Derecho, NodoPadre);
             }
         }
+
+        public void RecorrerPreOrden(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PreOrdenGrilla(Grilla, Raiz);
+        }
+        public void PreOrdenGrilla(DataGridView Grilla, clsNodo R)
+        {
+            Grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
+            if (R.Izquierdo != null)
+            {
+                PreOrdenGrilla(Grilla, R.Izquierdo);
+            }
+            if (R.Derecho != null)
+            {
+                PreOrdenGrilla(Grilla, R.Derecho);
+            }
+        }
+        public void RecorrerPreOrden()
+        {
+            StreamWriter AD = new StreamWriter("ArbolBinarioPreOrden.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            RecorrerPreOrdenIO(Raiz, AD);
+            AD.Close();
+        }
+
+        private void RecorrerPreOrdenIO(clsNodo R, StreamWriter writer)
+        {
+            if (R != null)
+            {
+                writer.Write($"{R.Codigo};{R.Nombre};{R.Tramite}\n");
+                RecorrerPreOrdenIO(R.Izquierdo, writer);
+                RecorrerPreOrdenIO(R.Derecho, writer);
+            }
+        }
+
+
+
         public void PostOrden(clsNodo Raiz, DataGridView Grilla)
         {
 

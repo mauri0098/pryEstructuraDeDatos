@@ -72,7 +72,7 @@
             // rbInOrden
             // 
             this.rbInOrden.AutoSize = true;
-            this.rbInOrden.Location = new System.Drawing.Point(14, 35);
+            this.rbInOrden.Location = new System.Drawing.Point(14, 75);
             this.rbInOrden.Name = "rbInOrden";
             this.rbInOrden.Size = new System.Drawing.Size(66, 17);
             this.rbInOrden.TabIndex = 25;
@@ -84,7 +84,7 @@
             // rdPreOrden
             // 
             this.rdPreOrden.AutoSize = true;
-            this.rdPreOrden.Location = new System.Drawing.Point(14, 74);
+            this.rdPreOrden.Location = new System.Drawing.Point(14, 111);
             this.rdPreOrden.Name = "rdPreOrden";
             this.rdPreOrden.Size = new System.Drawing.Size(73, 17);
             this.rdPreOrden.TabIndex = 26;
@@ -96,7 +96,7 @@
             // rdPostOrden
             // 
             this.rdPostOrden.AutoSize = true;
-            this.rdPostOrden.Location = new System.Drawing.Point(14, 114);
+            this.rdPostOrden.Location = new System.Drawing.Point(14, 147);
             this.rdPostOrden.Name = "rdPostOrden";
             this.rdPostOrden.Size = new System.Drawing.Size(78, 17);
             this.rdPostOrden.TabIndex = 27;

@@ -39,7 +39,7 @@ namespace pryEstructuraDeDatos
 
         private void rbInOrden_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbInOrden.Checked == true)
+            if (rdInOrden.Checked == true)
             {
                 Arbol.Recorrer(dgvGrilla);
                 Arbol.Recorrer(cbEliminar);
@@ -59,6 +59,16 @@ namespace pryEstructuraDeDatos
                
 
                 
+            }
+        }
+
+        private void rdOrdenDesendente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdOrdenDesendente.Checked==true)
+            {
+                Arbol.RecorrerDescGrilla(dgvGrilla);
+                Arbol.RecorrerComboDesc(cbEliminar);
+                Arbol.RecorrerInOrdenDescAD();
             }
         }
     }

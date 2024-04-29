@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.gbListado = new System.Windows.Forms.GroupBox();
-            this.rbInOrden = new System.Windows.Forms.RadioButton();
+            this.rdInOrden = new System.Windows.Forms.RadioButton();
             this.rdPreOrden = new System.Windows.Forms.RadioButton();
             this.rdPostOrden = new System.Windows.Forms.RadioButton();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
@@ -50,6 +50,7 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnEquilibrar = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.rdOrdenDesendente = new System.Windows.Forms.RadioButton();
             this.gbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.gbElementoEliminar.SuspendLayout();
@@ -58,7 +59,8 @@
             // 
             // gbListado
             // 
-            this.gbListado.Controls.Add(this.rbInOrden);
+            this.gbListado.Controls.Add(this.rdOrdenDesendente);
+            this.gbListado.Controls.Add(this.rdInOrden);
             this.gbListado.Controls.Add(this.rdPreOrden);
             this.gbListado.Controls.Add(this.rdPostOrden);
             this.gbListado.Controls.Add(this.dgvGrilla);
@@ -69,22 +71,22 @@
             this.gbListado.TabStop = false;
             this.gbListado.Text = "Listado del arból";
             // 
-            // rbInOrden
+            // rdInOrden
             // 
-            this.rbInOrden.AutoSize = true;
-            this.rbInOrden.Location = new System.Drawing.Point(14, 75);
-            this.rbInOrden.Name = "rbInOrden";
-            this.rbInOrden.Size = new System.Drawing.Size(66, 17);
-            this.rbInOrden.TabIndex = 25;
-            this.rbInOrden.TabStop = true;
-            this.rbInOrden.Text = "In-Orden";
-            this.rbInOrden.UseVisualStyleBackColor = true;
-            this.rbInOrden.CheckedChanged += new System.EventHandler(this.rbInOrden_CheckedChanged);
+            this.rdInOrden.AutoSize = true;
+            this.rdInOrden.Location = new System.Drawing.Point(6, 36);
+            this.rdInOrden.Name = "rdInOrden";
+            this.rdInOrden.Size = new System.Drawing.Size(66, 17);
+            this.rdInOrden.TabIndex = 25;
+            this.rdInOrden.TabStop = true;
+            this.rdInOrden.Text = "In-Orden";
+            this.rdInOrden.UseVisualStyleBackColor = true;
+            this.rdInOrden.CheckedChanged += new System.EventHandler(this.rbInOrden_CheckedChanged);
             // 
             // rdPreOrden
             // 
             this.rdPreOrden.AutoSize = true;
-            this.rdPreOrden.Location = new System.Drawing.Point(14, 111);
+            this.rdPreOrden.Location = new System.Drawing.Point(6, 105);
             this.rdPreOrden.Name = "rdPreOrden";
             this.rdPreOrden.Size = new System.Drawing.Size(73, 17);
             this.rdPreOrden.TabIndex = 26;
@@ -96,7 +98,7 @@
             // rdPostOrden
             // 
             this.rdPostOrden.AutoSize = true;
-            this.rdPostOrden.Location = new System.Drawing.Point(14, 147);
+            this.rdPostOrden.Location = new System.Drawing.Point(6, 137);
             this.rdPostOrden.Name = "rdPostOrden";
             this.rdPostOrden.Size = new System.Drawing.Size(78, 17);
             this.rdPostOrden.TabIndex = 27;
@@ -260,6 +262,17 @@
             this.treeView1.Size = new System.Drawing.Size(230, 234);
             this.treeView1.TabIndex = 28;
             // 
+            // rdOrdenDesendente
+            // 
+            this.rdOrdenDesendente.AutoSize = true;
+            this.rdOrdenDesendente.Location = new System.Drawing.Point(6, 70);
+            this.rdOrdenDesendente.Name = "rdOrdenDesendente";
+            this.rdOrdenDesendente.Size = new System.Drawing.Size(135, 17);
+            this.rdOrdenDesendente.TabIndex = 29;
+            this.rdOrdenDesendente.Text = "In-Orden Descendiente";
+            this.rdOrdenDesendente.UseVisualStyleBackColor = true;
+            this.rdOrdenDesendente.CheckedChanged += new System.EventHandler(this.rdOrdenDesendente_CheckedChanged);
+            // 
             // frmEstructuraDeDatos_ArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,9 +316,10 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Button btnEquilibrar;
-        private System.Windows.Forms.RadioButton rbInOrden;
+        private System.Windows.Forms.RadioButton rdInOrden;
         private System.Windows.Forms.RadioButton rdPreOrden;
         private System.Windows.Forms.RadioButton rdPostOrden;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.RadioButton rdOrdenDesendente;
     }
 }

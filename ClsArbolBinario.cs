@@ -97,15 +97,7 @@ namespace pryEstructuraDeDatos
 
 
         }
-        public void Recorrer(TreeView tree)
-        {
-            tree.Nodes.Clear();
-            TreeNode NodoPadre = new TreeNode("Arbol");
-            tree.Nodes.Add(NodoPadre);
-            preOrden(Raiz, NodoPadre);
-            tree.ExpandAll();
-            
-        }
+        
         //IN ORDEN DESCENDENTE
 
         public void RecorrerDescGrilla(DataGridView Grilla)
@@ -246,7 +238,15 @@ namespace pryEstructuraDeDatos
             RecorrerPreOrdenIO(Raiz, AD);
             AD.Close();
         }
+        public void Recorrertree(TreeView tree)
+        {
+            tree.Nodes.Clear();
+            TreeNode NodoPadre = new TreeNode("Arbol");
+            tree.Nodes.Add(NodoPadre);
+            preOrden(Raiz, NodoPadre);
+            tree.ExpandAll();
 
+        }
         private void RecorrerPreOrdenIO(clsNodo R, StreamWriter writer)
         {
             if (R != null)

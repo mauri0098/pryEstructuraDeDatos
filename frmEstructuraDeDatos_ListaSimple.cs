@@ -46,7 +46,7 @@ namespace pryEstructuraDeDatos
             {
                 MessageBox.Show("La Lista Esta Vacia");
             }
-            btnEliminar.Enabled = false;
+          
         }
 
         private void frmEstructuraDeDatos_ListaSimple_Load(object sender, EventArgs e)

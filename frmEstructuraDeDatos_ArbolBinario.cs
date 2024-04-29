@@ -31,7 +31,7 @@ namespace pryEstructuraDeDatos
             txtTramite.Text = "";
 
             Arbol.Recorrer(dgvGrilla);
-            Arbol.Recorrer(treeView1);
+            Arbol.Recorrertree(treeView1);
            
 
 
@@ -53,8 +53,7 @@ namespace pryEstructuraDeDatos
             if (rdPreOrden.Checked == true)
             {
                 Arbol.RecorrerPreOrden(dgvGrilla);
-                Arbol.Recorrer(treeView1);
-                Arbol.RecorrerPreOrden(cbEliminar);
+                Arbol.Recorrertree(treeView1);
                 Arbol.RecorrerPreOrden();
                
 
@@ -69,6 +68,36 @@ namespace pryEstructuraDeDatos
                 Arbol.RecorrerDescGrilla(dgvGrilla);
                 Arbol.RecorrerComboDesc(cbEliminar);
                 Arbol.RecorrerInOrdenDescAD();
+            }
+        }
+
+        private void rdPostOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdPostOrden.Checked ==  true)
+            {
+                Arbol.RecorrerPostOrdenGrilla(dgvGrilla);
+          
+             
+
+
+
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (cbEliminar.SelectedIndex != -1)
+            {
+                Int32 x = Convert.ToInt32(cbEliminar.Text);
+                Arbol.Eliminar(x);
+                Arbol.Recorrer(dgvGrilla);
+                Arbol.Recorrertree(treeView1);
+                Arbol.Recorrer(cbEliminar); 
+
+            }
+            else
+            {
+                MessageBox.Show("Falta Selecionar Elemento ");
             }
         }
     }

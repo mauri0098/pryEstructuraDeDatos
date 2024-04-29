@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbListado = new System.Windows.Forms.GroupBox();
+            this.rdOrdenDesendente = new System.Windows.Forms.RadioButton();
             this.rdInOrden = new System.Windows.Forms.RadioButton();
             this.rdPreOrden = new System.Windows.Forms.RadioButton();
             this.rdPostOrden = new System.Windows.Forms.RadioButton();
@@ -50,7 +51,6 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnEquilibrar = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.rdOrdenDesendente = new System.Windows.Forms.RadioButton();
             this.gbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.gbElementoEliminar.SuspendLayout();
@@ -71,9 +71,21 @@
             this.gbListado.TabStop = false;
             this.gbListado.Text = "Listado del arból";
             // 
+            // rdOrdenDesendente
+            // 
+            this.rdOrdenDesendente.AutoSize = true;
+            this.rdOrdenDesendente.Location = new System.Drawing.Point(6, 70);
+            this.rdOrdenDesendente.Name = "rdOrdenDesendente";
+            this.rdOrdenDesendente.Size = new System.Drawing.Size(135, 17);
+            this.rdOrdenDesendente.TabIndex = 29;
+            this.rdOrdenDesendente.Text = "In-Orden Descendiente";
+            this.rdOrdenDesendente.UseVisualStyleBackColor = true;
+            this.rdOrdenDesendente.CheckedChanged += new System.EventHandler(this.rdOrdenDesendente_CheckedChanged);
+            // 
             // rdInOrden
             // 
             this.rdInOrden.AutoSize = true;
+            this.rdInOrden.Checked = true;
             this.rdInOrden.Location = new System.Drawing.Point(6, 36);
             this.rdInOrden.Name = "rdInOrden";
             this.rdInOrden.Size = new System.Drawing.Size(66, 17);
@@ -90,7 +102,6 @@
             this.rdPreOrden.Name = "rdPreOrden";
             this.rdPreOrden.Size = new System.Drawing.Size(73, 17);
             this.rdPreOrden.TabIndex = 26;
-            this.rdPreOrden.TabStop = true;
             this.rdPreOrden.Text = "Pre-Orden";
             this.rdPreOrden.UseVisualStyleBackColor = true;
             this.rdPreOrden.CheckedChanged += new System.EventHandler(this.rdPreOrden_CheckedChanged);
@@ -102,9 +113,9 @@
             this.rdPostOrden.Name = "rdPostOrden";
             this.rdPostOrden.Size = new System.Drawing.Size(78, 17);
             this.rdPostOrden.TabIndex = 27;
-            this.rdPostOrden.TabStop = true;
             this.rdPostOrden.Text = "Post-Orden";
             this.rdPostOrden.UseVisualStyleBackColor = true;
+            this.rdPostOrden.CheckedChanged += new System.EventHandler(this.rdPostOrden_CheckedChanged);
             // 
             // dgvGrilla
             // 
@@ -162,6 +173,7 @@
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblCodigo2
             // 
@@ -261,17 +273,6 @@
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(230, 234);
             this.treeView1.TabIndex = 28;
-            // 
-            // rdOrdenDesendente
-            // 
-            this.rdOrdenDesendente.AutoSize = true;
-            this.rdOrdenDesendente.Location = new System.Drawing.Point(6, 70);
-            this.rdOrdenDesendente.Name = "rdOrdenDesendente";
-            this.rdOrdenDesendente.Size = new System.Drawing.Size(135, 17);
-            this.rdOrdenDesendente.TabIndex = 29;
-            this.rdOrdenDesendente.Text = "In-Orden Descendiente";
-            this.rdOrdenDesendente.UseVisualStyleBackColor = true;
-            this.rdOrdenDesendente.CheckedChanged += new System.EventHandler(this.rdOrdenDesendente_CheckedChanged);
             // 
             // frmEstructuraDeDatos_ArbolBinario
             // 

@@ -70,7 +70,7 @@ namespace pryEstructuraDeDatos
 
         private void frmEstructuraDeDatos_ListaSimple_Load(object sender, EventArgs e)
         {
-
+            btnAgregar.Enabled = false;
         }
 
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
@@ -79,6 +79,11 @@ namespace pryEstructuraDeDatos
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            btnAgregar.Enabled = !string.IsNullOrWhiteSpace(txtCodigo.Text);
         }
     }
 }

@@ -64,6 +64,7 @@
             this.gbListado.Controls.Add(this.rdPreOrden);
             this.gbListado.Controls.Add(this.rdPostOrden);
             this.gbListado.Controls.Add(this.dgvGrilla);
+            this.gbListado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbListado.Location = new System.Drawing.Point(6, 242);
             this.gbListado.Name = "gbListado";
             this.gbListado.Size = new System.Drawing.Size(673, 210);
@@ -76,7 +77,7 @@
             this.rdOrdenDesendente.AutoSize = true;
             this.rdOrdenDesendente.Location = new System.Drawing.Point(6, 70);
             this.rdOrdenDesendente.Name = "rdOrdenDesendente";
-            this.rdOrdenDesendente.Size = new System.Drawing.Size(135, 17);
+            this.rdOrdenDesendente.Size = new System.Drawing.Size(153, 19);
             this.rdOrdenDesendente.TabIndex = 29;
             this.rdOrdenDesendente.Text = "In-Orden Descendiente";
             this.rdOrdenDesendente.UseVisualStyleBackColor = true;
@@ -88,7 +89,7 @@
             this.rdInOrden.Checked = true;
             this.rdInOrden.Location = new System.Drawing.Point(6, 36);
             this.rdInOrden.Name = "rdInOrden";
-            this.rdInOrden.Size = new System.Drawing.Size(66, 17);
+            this.rdInOrden.Size = new System.Drawing.Size(73, 19);
             this.rdInOrden.TabIndex = 25;
             this.rdInOrden.TabStop = true;
             this.rdInOrden.Text = "In-Orden";
@@ -100,7 +101,7 @@
             this.rdPreOrden.AutoSize = true;
             this.rdPreOrden.Location = new System.Drawing.Point(6, 105);
             this.rdPreOrden.Name = "rdPreOrden";
-            this.rdPreOrden.Size = new System.Drawing.Size(73, 17);
+            this.rdPreOrden.Size = new System.Drawing.Size(82, 19);
             this.rdPreOrden.TabIndex = 26;
             this.rdPreOrden.Text = "Pre-Orden";
             this.rdPreOrden.UseVisualStyleBackColor = true;
@@ -111,7 +112,7 @@
             this.rdPostOrden.AutoSize = true;
             this.rdPostOrden.Location = new System.Drawing.Point(6, 137);
             this.rdPostOrden.Name = "rdPostOrden";
-            this.rdPostOrden.Size = new System.Drawing.Size(78, 17);
+            this.rdPostOrden.Size = new System.Drawing.Size(88, 19);
             this.rdPostOrden.TabIndex = 27;
             this.rdPostOrden.Text = "Post-Orden";
             this.rdPostOrden.UseVisualStyleBackColor = true;
@@ -149,6 +150,7 @@
             this.gbElementoEliminar.Controls.Add(this.cbEliminar);
             this.gbElementoEliminar.Controls.Add(this.btnEliminar);
             this.gbElementoEliminar.Controls.Add(this.lblCodigo2);
+            this.gbElementoEliminar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbElementoEliminar.Location = new System.Drawing.Point(467, 12);
             this.gbElementoEliminar.Name = "gbElementoEliminar";
             this.gbElementoEliminar.Size = new System.Drawing.Size(202, 135);
@@ -162,7 +164,7 @@
             this.cbEliminar.FormattingEnabled = true;
             this.cbEliminar.Location = new System.Drawing.Point(75, 35);
             this.cbEliminar.Name = "cbEliminar";
-            this.cbEliminar.Size = new System.Drawing.Size(115, 21);
+            this.cbEliminar.Size = new System.Drawing.Size(115, 23);
             this.cbEliminar.TabIndex = 10;
             // 
             // btnEliminar
@@ -180,7 +182,7 @@
             this.lblCodigo2.AutoSize = true;
             this.lblCodigo2.Location = new System.Drawing.Point(17, 38);
             this.lblCodigo2.Name = "lblCodigo2";
-            this.lblCodigo2.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo2.Size = new System.Drawing.Size(50, 15);
             this.lblCodigo2.TabIndex = 3;
             this.lblCodigo2.Text = "Código:";
             // 
@@ -193,6 +195,7 @@
             this.gbNuevoElemento.Controls.Add(this.lblTramite);
             this.gbNuevoElemento.Controls.Add(this.lblNombre);
             this.gbNuevoElemento.Controls.Add(this.lblCodigo);
+            this.gbNuevoElemento.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbNuevoElemento.Location = new System.Drawing.Point(242, 12);
             this.gbNuevoElemento.Name = "gbNuevoElemento";
             this.gbNuevoElemento.Size = new System.Drawing.Size(219, 227);
@@ -214,21 +217,21 @@
             // 
             this.txtTramite.Location = new System.Drawing.Point(88, 102);
             this.txtTramite.Name = "txtTramite";
-            this.txtTramite.Size = new System.Drawing.Size(100, 20);
+            this.txtTramite.Size = new System.Drawing.Size(100, 21);
             this.txtTramite.TabIndex = 5;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(88, 67);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(100, 21);
             this.txtNombre.TabIndex = 4;
             // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(123, 38);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(65, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(65, 21);
             this.txtCodigo.TabIndex = 3;
             // 
             // lblTramite
@@ -236,7 +239,7 @@
             this.lblTramite.AutoSize = true;
             this.lblTramite.Location = new System.Drawing.Point(13, 106);
             this.lblTramite.Name = "lblTramite";
-            this.lblTramite.Size = new System.Drawing.Size(45, 13);
+            this.lblTramite.Size = new System.Drawing.Size(52, 15);
             this.lblTramite.TabIndex = 2;
             this.lblTramite.Text = "Trámite:";
             // 
@@ -245,7 +248,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(13, 70);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblNombre.Size = new System.Drawing.Size(55, 15);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -254,12 +257,13 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Location = new System.Drawing.Point(13, 41);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo.Size = new System.Drawing.Size(50, 15);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código:";
             // 
             // btnEquilibrar
             // 
+            this.btnEquilibrar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEquilibrar.Location = new System.Drawing.Point(487, 169);
             this.btnEquilibrar.Name = "btnEquilibrar";
             this.btnEquilibrar.Size = new System.Drawing.Size(161, 35);
@@ -285,6 +289,7 @@
             this.Controls.Add(this.gbElementoEliminar);
             this.Controls.Add(this.gbNuevoElemento);
             this.Name = "frmEstructuraDeDatos_ArbolBinario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EstructuraDeDatos_Arbol Binario";
             this.gbListado.ResumeLayout(false);
             this.gbListado.PerformLayout();

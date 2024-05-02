@@ -58,9 +58,10 @@
             // 
             this.gbListado.Controls.Add(this.lst);
             this.gbListado.Controls.Add(this.dgvGrilla);
+            this.gbListado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbListado.Location = new System.Drawing.Point(0, 239);
             this.gbListado.Name = "gbListado";
-            this.gbListado.Size = new System.Drawing.Size(673, 210);
+            this.gbListado.Size = new System.Drawing.Size(663, 210);
             this.gbListado.TabIndex = 16;
             this.gbListado.TabStop = false;
             this.gbListado.Text = "Listado en una lista y una grilla";
@@ -68,9 +69,10 @@
             // lst
             // 
             this.lst.FormattingEnabled = true;
+            this.lst.ItemHeight = 15;
             this.lst.Location = new System.Drawing.Point(6, 19);
             this.lst.Name = "lst";
-            this.lst.Size = new System.Drawing.Size(224, 186);
+            this.lst.Size = new System.Drawing.Size(224, 154);
             this.lst.TabIndex = 15;
             // 
             // dgvGrilla
@@ -80,9 +82,9 @@
             this.CODIGO,
             this.Nombre,
             this.TRAMITE});
-            this.dgvGrilla.Location = new System.Drawing.Point(236, 18);
+            this.dgvGrilla.Location = new System.Drawing.Point(236, 19);
             this.dgvGrilla.Name = "dgvGrilla";
-            this.dgvGrilla.Size = new System.Drawing.Size(427, 186);
+            this.dgvGrilla.Size = new System.Drawing.Size(416, 174);
             this.dgvGrilla.TabIndex = 14;
             // 
             // CODIGO
@@ -105,9 +107,10 @@
             this.gbElementoEliminar.Controls.Add(this.cbEliminar);
             this.gbElementoEliminar.Controls.Add(this.btnEliminar);
             this.gbElementoEliminar.Controls.Add(this.lblCodigo2);
+            this.gbElementoEliminar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbElementoEliminar.Location = new System.Drawing.Point(461, 9);
             this.gbElementoEliminar.Name = "gbElementoEliminar";
-            this.gbElementoEliminar.Size = new System.Drawing.Size(212, 227);
+            this.gbElementoEliminar.Size = new System.Drawing.Size(200, 227);
             this.gbElementoEliminar.TabIndex = 17;
             this.gbElementoEliminar.TabStop = false;
             this.gbElementoEliminar.Text = "Elemento a eliminar";
@@ -116,14 +119,14 @@
             // 
             this.cbEliminar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEliminar.FormattingEnabled = true;
-            this.cbEliminar.Location = new System.Drawing.Point(75, 116);
+            this.cbEliminar.Location = new System.Drawing.Point(76, 41);
             this.cbEliminar.Name = "cbEliminar";
-            this.cbEliminar.Size = new System.Drawing.Size(115, 21);
+            this.cbEliminar.Size = new System.Drawing.Size(115, 23);
             this.cbEliminar.TabIndex = 10;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(29, 157);
+            this.btnEliminar.Location = new System.Drawing.Point(19, 88);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(161, 35);
             this.btnEliminar.TabIndex = 9;
@@ -134,9 +137,9 @@
             // lblCodigo2
             // 
             this.lblCodigo2.AutoSize = true;
-            this.lblCodigo2.Location = new System.Drawing.Point(26, 119);
+            this.lblCodigo2.Location = new System.Drawing.Point(16, 41);
             this.lblCodigo2.Name = "lblCodigo2";
-            this.lblCodigo2.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo2.Size = new System.Drawing.Size(50, 15);
             this.lblCodigo2.TabIndex = 3;
             this.lblCodigo2.Text = "Código:";
             // 
@@ -149,6 +152,7 @@
             this.gbNuevoElemento.Controls.Add(this.lblTramite);
             this.gbNuevoElemento.Controls.Add(this.lblNombre);
             this.gbNuevoElemento.Controls.Add(this.lblCodigo);
+            this.gbNuevoElemento.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbNuevoElemento.Location = new System.Drawing.Point(236, 9);
             this.gbNuevoElemento.Name = "gbNuevoElemento";
             this.gbNuevoElemento.Size = new System.Drawing.Size(219, 227);
@@ -170,21 +174,21 @@
             // 
             this.txtTramite.Location = new System.Drawing.Point(88, 102);
             this.txtTramite.Name = "txtTramite";
-            this.txtTramite.Size = new System.Drawing.Size(100, 20);
+            this.txtTramite.Size = new System.Drawing.Size(100, 21);
             this.txtTramite.TabIndex = 5;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(88, 67);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(100, 21);
             this.txtNombre.TabIndex = 4;
             // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(123, 38);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(65, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(65, 21);
             this.txtCodigo.TabIndex = 3;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
@@ -194,7 +198,7 @@
             this.lblTramite.AutoSize = true;
             this.lblTramite.Location = new System.Drawing.Point(13, 106);
             this.lblTramite.Name = "lblTramite";
-            this.lblTramite.Size = new System.Drawing.Size(45, 13);
+            this.lblTramite.Size = new System.Drawing.Size(52, 15);
             this.lblTramite.TabIndex = 2;
             this.lblTramite.Text = "Trámite:";
             // 
@@ -203,7 +207,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Location = new System.Drawing.Point(13, 70);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblNombre.Size = new System.Drawing.Size(55, 15);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -212,7 +216,7 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Location = new System.Drawing.Point(13, 41);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo.Size = new System.Drawing.Size(50, 15);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código:";
             // 
@@ -230,11 +234,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 457);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(673, 457);
             this.Controls.Add(this.gbListado);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbElementoEliminar);
             this.Controls.Add(this.gbNuevoElemento);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "frmEstructuraDeDatos_ListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura De Datos_Lista Simple";

@@ -67,7 +67,7 @@
             this.TRAMITE});
             this.dgvGrilla.Location = new System.Drawing.Point(236, 19);
             this.dgvGrilla.Name = "dgvGrilla";
-            this.dgvGrilla.Size = new System.Drawing.Size(427, 186);
+            this.dgvGrilla.Size = new System.Drawing.Size(431, 169);
             this.dgvGrilla.TabIndex = 14;
             // 
             // CODIGO
@@ -94,6 +94,7 @@
             this.gbElementoEliminado.Controls.Add(this.lbTramite2);
             this.gbElementoEliminado.Controls.Add(this.lbNombre2);
             this.gbElementoEliminado.Controls.Add(this.lbCodigo2);
+            this.gbElementoEliminado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbElementoEliminado.Location = new System.Drawing.Point(470, 5);
             this.gbElementoEliminado.Name = "gbElementoEliminado";
             this.gbElementoEliminado.Size = new System.Drawing.Size(212, 227);
@@ -104,6 +105,7 @@
             // lblTramite
             // 
             this.lblTramite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTramite.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTramite.Location = new System.Drawing.Point(76, 102);
             this.lblTramite.Name = "lblTramite";
             this.lblTramite.Size = new System.Drawing.Size(114, 23);
@@ -112,6 +114,7 @@
             // lblCodigo
             // 
             this.lblCodigo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCodigo.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.Location = new System.Drawing.Point(102, 35);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(88, 23);
@@ -120,6 +123,7 @@
             // lblNombre
             // 
             this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombre.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(76, 67);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(114, 23);
@@ -138,27 +142,27 @@
             // lbTramite2
             // 
             this.lbTramite2.AutoSize = true;
-            this.lbTramite2.Location = new System.Drawing.Point(22, 109);
+            this.lbTramite2.Location = new System.Drawing.Point(7, 109);
             this.lbTramite2.Name = "lbTramite2";
-            this.lbTramite2.Size = new System.Drawing.Size(45, 13);
+            this.lbTramite2.Size = new System.Drawing.Size(52, 15);
             this.lbTramite2.TabIndex = 5;
             this.lbTramite2.Text = "Trámite:";
             // 
             // lbNombre2
             // 
             this.lbNombre2.AutoSize = true;
-            this.lbNombre2.Location = new System.Drawing.Point(22, 74);
+            this.lbNombre2.Location = new System.Drawing.Point(7, 71);
             this.lbNombre2.Name = "lbNombre2";
-            this.lbNombre2.Size = new System.Drawing.Size(47, 13);
+            this.lbNombre2.Size = new System.Drawing.Size(55, 15);
             this.lbNombre2.TabIndex = 4;
             this.lbNombre2.Text = "Nombre:";
             // 
             // lbCodigo2
             // 
             this.lbCodigo2.AutoSize = true;
-            this.lbCodigo2.Location = new System.Drawing.Point(26, 38);
+            this.lbCodigo2.Location = new System.Drawing.Point(7, 42);
             this.lbCodigo2.Name = "lbCodigo2";
-            this.lbCodigo2.Size = new System.Drawing.Size(43, 13);
+            this.lbCodigo2.Size = new System.Drawing.Size(50, 15);
             this.lbCodigo2.TabIndex = 3;
             this.lbCodigo2.Text = "Código:";
             // 
@@ -171,6 +175,7 @@
             this.gbNuevoElemento.Controls.Add(this.lbTramite);
             this.gbNuevoElemento.Controls.Add(this.lbNombre);
             this.gbNuevoElemento.Controls.Add(this.lbCodigo);
+            this.gbNuevoElemento.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbNuevoElemento.Location = new System.Drawing.Point(245, 5);
             this.gbNuevoElemento.Name = "gbNuevoElemento";
             this.gbNuevoElemento.Size = new System.Drawing.Size(219, 227);
@@ -190,23 +195,26 @@
             // 
             // txtTramite
             // 
-            this.txtTramite.Location = new System.Drawing.Point(88, 106);
+            this.txtTramite.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTramite.Location = new System.Drawing.Point(99, 104);
             this.txtTramite.Name = "txtTramite";
-            this.txtTramite.Size = new System.Drawing.Size(100, 20);
+            this.txtTramite.Size = new System.Drawing.Size(100, 21);
             this.txtTramite.TabIndex = 5;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(88, 70);
+            this.txtNombre.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(99, 68);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(100, 21);
             this.txtNombre.TabIndex = 4;
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(123, 41);
+            this.txtCodigo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(134, 31);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(65, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(65, 21);
             this.txtCodigo.TabIndex = 3;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
@@ -214,27 +222,27 @@
             // lbTramite
             // 
             this.lbTramite.AutoSize = true;
-            this.lbTramite.Location = new System.Drawing.Point(21, 109);
+            this.lbTramite.Location = new System.Drawing.Point(26, 108);
             this.lbTramite.Name = "lbTramite";
-            this.lbTramite.Size = new System.Drawing.Size(45, 13);
+            this.lbTramite.Size = new System.Drawing.Size(52, 15);
             this.lbTramite.TabIndex = 2;
             this.lbTramite.Text = "Trámite:";
             // 
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(21, 74);
+            this.lbNombre.Location = new System.Drawing.Point(26, 73);
             this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(47, 13);
+            this.lbNombre.Size = new System.Drawing.Size(55, 15);
             this.lbNombre.TabIndex = 1;
             this.lbNombre.Text = "Nombre:";
             // 
             // lbCodigo
             // 
             this.lbCodigo.AutoSize = true;
-            this.lbCodigo.Location = new System.Drawing.Point(21, 41);
+            this.lbCodigo.Location = new System.Drawing.Point(26, 41);
             this.lbCodigo.Name = "lbCodigo";
-            this.lbCodigo.Size = new System.Drawing.Size(43, 13);
+            this.lbCodigo.Size = new System.Drawing.Size(50, 15);
             this.lbCodigo.TabIndex = 0;
             this.lbCodigo.Text = "Código:";
             // 
@@ -242,6 +250,7 @@
             // 
             this.gbListado.Controls.Add(this.lstCola);
             this.gbListado.Controls.Add(this.dgvGrilla);
+            this.gbListado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbListado.Location = new System.Drawing.Point(9, 235);
             this.gbListado.Name = "gbListado";
             this.gbListado.Size = new System.Drawing.Size(673, 210);
@@ -252,9 +261,10 @@
             // lstCola
             // 
             this.lstCola.FormattingEnabled = true;
+            this.lstCola.ItemHeight = 15;
             this.lstCola.Location = new System.Drawing.Point(6, 19);
             this.lstCola.Name = "lstCola";
-            this.lstCola.Size = new System.Drawing.Size(224, 186);
+            this.lstCola.Size = new System.Drawing.Size(224, 169);
             this.lstCola.TabIndex = 15;
             // 
             // pictureBox1

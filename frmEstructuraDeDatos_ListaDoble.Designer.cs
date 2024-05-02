@@ -62,19 +62,23 @@
             // 
             this.gbListado.Controls.Add(this.lst);
             this.gbListado.Controls.Add(this.dgvGrilla);
+            this.gbListado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbListado.ForeColor = System.Drawing.Color.Black;
             this.gbListado.Location = new System.Drawing.Point(3, 235);
             this.gbListado.Name = "gbListado";
-            this.gbListado.Size = new System.Drawing.Size(673, 210);
+            this.gbListado.Size = new System.Drawing.Size(673, 203);
             this.gbListado.TabIndex = 20;
             this.gbListado.TabStop = false;
             this.gbListado.Text = "Listado en una lista y una grilla";
             // 
             // lst
             // 
+            this.lst.ForeColor = System.Drawing.Color.Black;
             this.lst.FormattingEnabled = true;
+            this.lst.ItemHeight = 15;
             this.lst.Location = new System.Drawing.Point(6, 19);
             this.lst.Name = "lst";
-            this.lst.Size = new System.Drawing.Size(224, 186);
+            this.lst.Size = new System.Drawing.Size(224, 169);
             this.lst.TabIndex = 15;
             // 
             // dgvGrilla
@@ -86,7 +90,7 @@
             this.TRAMITE});
             this.dgvGrilla.Location = new System.Drawing.Point(236, 18);
             this.dgvGrilla.Name = "dgvGrilla";
-            this.dgvGrilla.Size = new System.Drawing.Size(427, 186);
+            this.dgvGrilla.Size = new System.Drawing.Size(427, 170);
             this.dgvGrilla.TabIndex = 14;
             // 
             // CODIGO
@@ -106,10 +110,13 @@
             // 
             // gbElementoEliminar
             // 
+            this.gbElementoEliminar.BackColor = System.Drawing.SystemColors.Control;
             this.gbElementoEliminar.Controls.Add(this.gbListarDatos);
             this.gbElementoEliminar.Controls.Add(this.cbEliminar);
             this.gbElementoEliminar.Controls.Add(this.btnEliminar);
             this.gbElementoEliminar.Controls.Add(this.lblCodigo2);
+            this.gbElementoEliminar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbElementoEliminar.ForeColor = System.Drawing.Color.Black;
             this.gbElementoEliminar.Location = new System.Drawing.Point(464, 5);
             this.gbElementoEliminar.Name = "gbElementoEliminar";
             this.gbElementoEliminar.Size = new System.Drawing.Size(212, 227);
@@ -121,6 +128,7 @@
             // 
             this.gbListarDatos.Controls.Add(this.rdDesendente);
             this.gbListarDatos.Controls.Add(this.rdAsendente);
+            this.gbListarDatos.ForeColor = System.Drawing.Color.Black;
             this.gbListarDatos.Location = new System.Drawing.Point(6, 121);
             this.gbListarDatos.Name = "gbListarDatos";
             this.gbListarDatos.Size = new System.Drawing.Size(196, 100);
@@ -133,7 +141,7 @@
             this.rdDesendente.AutoSize = true;
             this.rdDesendente.Location = new System.Drawing.Point(6, 45);
             this.rdDesendente.Name = "rdDesendente";
-            this.rdDesendente.Size = new System.Drawing.Size(83, 17);
+            this.rdDesendente.Size = new System.Drawing.Size(93, 19);
             this.rdDesendente.TabIndex = 1;
             this.rdDesendente.TabStop = true;
             this.rdDesendente.Text = "Desendente";
@@ -145,7 +153,7 @@
             this.rdAsendente.AutoSize = true;
             this.rdAsendente.Location = new System.Drawing.Point(6, 19);
             this.rdAsendente.Name = "rdAsendente";
-            this.rdAsendente.Size = new System.Drawing.Size(76, 17);
+            this.rdAsendente.Size = new System.Drawing.Size(84, 19);
             this.rdAsendente.TabIndex = 0;
             this.rdAsendente.TabStop = true;
             this.rdAsendente.Text = "Asendente";
@@ -158,7 +166,7 @@
             this.cbEliminar.FormattingEnabled = true;
             this.cbEliminar.Location = new System.Drawing.Point(75, 26);
             this.cbEliminar.Name = "cbEliminar";
-            this.cbEliminar.Size = new System.Drawing.Size(115, 21);
+            this.cbEliminar.Size = new System.Drawing.Size(115, 23);
             this.cbEliminar.TabIndex = 10;
             this.cbEliminar.SelectedIndexChanged += new System.EventHandler(this.cbEliminar_SelectedIndexChanged);
             this.cbEliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbEliminar_KeyPress);
@@ -176,9 +184,9 @@
             // lblCodigo2
             // 
             this.lblCodigo2.AutoSize = true;
-            this.lblCodigo2.Location = new System.Drawing.Point(26, 29);
+            this.lblCodigo2.Location = new System.Drawing.Point(13, 29);
             this.lblCodigo2.Name = "lblCodigo2";
-            this.lblCodigo2.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo2.Size = new System.Drawing.Size(50, 15);
             this.lblCodigo2.TabIndex = 3;
             this.lblCodigo2.Text = "Código:";
             // 
@@ -191,6 +199,8 @@
             this.gbNuevoElemento.Controls.Add(this.lblTramite);
             this.gbNuevoElemento.Controls.Add(this.lblNombre);
             this.gbNuevoElemento.Controls.Add(this.lblCodigo);
+            this.gbNuevoElemento.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbNuevoElemento.ForeColor = System.Drawing.Color.Black;
             this.gbNuevoElemento.Location = new System.Drawing.Point(239, 5);
             this.gbNuevoElemento.Name = "gbNuevoElemento";
             this.gbNuevoElemento.Size = new System.Drawing.Size(219, 227);
@@ -210,23 +220,26 @@
             // 
             // txtTramite
             // 
-            this.txtTramite.Location = new System.Drawing.Point(88, 102);
+            this.txtTramite.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTramite.Location = new System.Drawing.Point(88, 108);
             this.txtTramite.Name = "txtTramite";
-            this.txtTramite.Size = new System.Drawing.Size(100, 20);
+            this.txtTramite.Size = new System.Drawing.Size(100, 21);
             this.txtTramite.TabIndex = 5;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(88, 67);
+            this.txtNombre.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(88, 75);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(100, 21);
             this.txtNombre.TabIndex = 4;
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(123, 38);
+            this.txtCodigo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(123, 42);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(65, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(65, 21);
             this.txtCodigo.TabIndex = 3;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
@@ -234,27 +247,27 @@
             // lblTramite
             // 
             this.lblTramite.AutoSize = true;
-            this.lblTramite.Location = new System.Drawing.Point(13, 106);
+            this.lblTramite.Location = new System.Drawing.Point(14, 114);
             this.lblTramite.Name = "lblTramite";
-            this.lblTramite.Size = new System.Drawing.Size(45, 13);
+            this.lblTramite.Size = new System.Drawing.Size(52, 15);
             this.lblTramite.TabIndex = 2;
             this.lblTramite.Text = "Trámite:";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(13, 70);
+            this.lblNombre.Location = new System.Drawing.Point(14, 80);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblNombre.Size = new System.Drawing.Size(55, 15);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre:";
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(13, 41);
+            this.lblCodigo.Location = new System.Drawing.Point(20, 44);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo.Size = new System.Drawing.Size(50, 15);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código:";
             // 
@@ -272,6 +285,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(685, 450);
             this.Controls.Add(this.gbListado);
             this.Controls.Add(this.pictureBox1);

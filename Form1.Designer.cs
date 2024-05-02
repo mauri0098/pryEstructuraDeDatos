@@ -73,15 +73,16 @@
             // datosDeAlumnoToolStripMenuItem
             // 
             this.datosDeAlumnoToolStripMenuItem.Name = "datosDeAlumnoToolStripMenuItem";
-            this.datosDeAlumnoToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.datosDeAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.datosDeAlumnoToolStripMenuItem.Text = "Datos De Alumno";
             this.datosDeAlumnoToolStripMenuItem.Click += new System.EventHandler(this.datosDeAlumnoToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // estructurasLinialesToolStripMenuItem
             // 
@@ -133,7 +134,7 @@
             // arbolBinarioToolStripMenuItem
             // 
             this.arbolBinarioToolStripMenuItem.Name = "arbolBinarioToolStripMenuItem";
-            this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.arbolBinarioToolStripMenuItem.Text = "Arbol Binario...";
             this.arbolBinarioToolStripMenuItem.Click += new System.EventHandler(this.arbolBinarioToolStripMenuItem_Click);
             // 

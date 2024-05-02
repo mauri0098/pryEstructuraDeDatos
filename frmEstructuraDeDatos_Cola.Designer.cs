@@ -33,6 +33,9 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TRAMITE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbElementoEliminado = new System.Windows.Forms.GroupBox();
+            this.lblTramite = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblNombre2 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lbTramite2 = new System.Windows.Forms.Label();
             this.lbNombre2 = new System.Windows.Forms.Label();
@@ -48,9 +51,6 @@
             this.gbListado = new System.Windows.Forms.GroupBox();
             this.lstCola = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTramite = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblNombre2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.gbElementoEliminado.SuspendLayout();
             this.gbNuevoElemento.SuspendLayout();
@@ -100,6 +100,30 @@
             this.gbElementoEliminado.TabIndex = 12;
             this.gbElementoEliminado.TabStop = false;
             this.gbElementoEliminado.Text = "Elemento Eliminado";
+            // 
+            // lblTramite
+            // 
+            this.lblTramite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTramite.Location = new System.Drawing.Point(76, 102);
+            this.lblTramite.Name = "lblTramite";
+            this.lblTramite.Size = new System.Drawing.Size(114, 23);
+            this.lblTramite.TabIndex = 12;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCodigo.Location = new System.Drawing.Point(102, 35);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(88, 23);
+            this.lblCodigo.TabIndex = 10;
+            // 
+            // lblNombre2
+            // 
+            this.lblNombre2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombre2.Location = new System.Drawing.Point(76, 67);
+            this.lblNombre2.Name = "lblNombre2";
+            this.lblNombre2.Size = new System.Drawing.Size(114, 23);
+            this.lblNombre2.TabIndex = 11;
             // 
             // btnEliminar
             // 
@@ -184,6 +208,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(65, 20);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // lbTramite
             // 
@@ -241,30 +266,6 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // lblTramite
-            // 
-            this.lblTramite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTramite.Location = new System.Drawing.Point(76, 102);
-            this.lblTramite.Name = "lblTramite";
-            this.lblTramite.Size = new System.Drawing.Size(114, 23);
-            this.lblTramite.TabIndex = 12;
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCodigo.Location = new System.Drawing.Point(102, 35);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(88, 23);
-            this.lblCodigo.TabIndex = 10;
-            // 
-            // lblNombre2
-            // 
-            this.lblNombre2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblNombre2.Location = new System.Drawing.Point(76, 67);
-            this.lblNombre2.Name = "lblNombre2";
-            this.lblNombre2.Size = new System.Drawing.Size(114, 23);
-            this.lblNombre2.TabIndex = 11;
-            // 
             // frmEstructuraDeDatos_Cola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,6 +278,7 @@
             this.Name = "frmEstructuraDeDatos_Cola";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura De Datos: Cola";
+            this.Load += new System.EventHandler(this.frmEstructuraDeDatos_Cola_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.gbElementoEliminado.ResumeLayout(false);
             this.gbElementoEliminado.PerformLayout();

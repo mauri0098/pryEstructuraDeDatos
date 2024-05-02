@@ -53,6 +53,17 @@ namespace pryEstructuraDeDatos
                 lblTramite.Text = "";
 
             }
+
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            btnAgregar.Enabled = !string.IsNullOrWhiteSpace(txtCodigo.Text);
+        }
+
+        private void frmEstructuraDeDatos_Cola_Load(object sender, EventArgs e)
+        {
+            btnAgregar.Enabled = false;
         }
     }
 }

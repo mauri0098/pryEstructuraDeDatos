@@ -38,12 +38,14 @@ namespace pryEstructuraDeDatos
                 simple.Recorrer(lst);
                 simple.Recorrer(cbEliminar);
                 simple.Recorrer();
-
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
 
             }
             catch (FormatException)
             {
-                MessageBox.Show("El código debe ser un número entero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se debe rellener la casilla de codigo y debe ser un número entero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -69,6 +71,14 @@ namespace pryEstructuraDeDatos
         private void frmEstructuraDeDatos_ListaSimple_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

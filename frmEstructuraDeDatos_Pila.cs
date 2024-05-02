@@ -29,7 +29,7 @@ namespace pryEstructuraDeDatos
                 
                 if (!string.IsNullOrWhiteSpace(txtNombre.Text) && !txtNombre.Text.All(char.IsLetter))
                 {
-                    MessageBox.Show("El nombre solo puede contener letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Se debe rellener la casilla de codigo y debe ser un número entero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return; 
                 }
 

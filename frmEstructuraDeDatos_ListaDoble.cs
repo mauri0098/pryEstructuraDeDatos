@@ -25,6 +25,13 @@ namespace pryEstructuraDeDatos
             Obj.Codigo = codigo;
             Obj.Nombre = txtNombre.Text;
             Obj.Tramite = txtTramite.Text;
+           
+            if (!string.IsNullOrWhiteSpace(txtNombre.Text) && !txtNombre.Text.All(char.IsLetter))
+            {
+                MessageBox.Show("El nombre solo puede contener letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             listaDoble.Agregar(Obj);
             if (rdAsendente.Checked == true)
             {
@@ -50,6 +57,7 @@ namespace pryEstructuraDeDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            btnEliminar.Enabled = false;
             if (listaDoble.Primero != null)
             {
                 Int32 x = Convert.ToInt32(cbEliminar.Text);
@@ -98,6 +106,39 @@ namespace pryEstructuraDeDatos
         private void frmEstructuraDeDatos_ListaDoble_Load(object sender, EventArgs e)
         {
             rdAsendente.Checked = true;
+            btnAgregar.Enabled = false;
+
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            btnAgregar.Enabled = !string.IsNullOrWhiteSpace(txtCodigo.Text);
+            
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cbEliminar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void cbEliminar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbEliminar.SelectedIndex == -1)
+            {
+                btnEliminar.Enabled = false;
+            }
+            else
+            {
+                btnEliminar.Enabled = true;
+            }
         }
     }
     

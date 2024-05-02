@@ -160,6 +160,8 @@
             this.cbEliminar.Name = "cbEliminar";
             this.cbEliminar.Size = new System.Drawing.Size(115, 21);
             this.cbEliminar.TabIndex = 10;
+            this.cbEliminar.SelectedIndexChanged += new System.EventHandler(this.cbEliminar_SelectedIndexChanged);
+            this.cbEliminar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbEliminar_KeyPress);
             // 
             // btnEliminar
             // 
@@ -226,6 +228,8 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(65, 20);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // lblTramite
             // 

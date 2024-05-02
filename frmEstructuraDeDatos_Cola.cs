@@ -27,6 +27,9 @@ namespace pryEstructuraDeDatos
             fila.Recorrer(dgvGrilla);
             fila.Recorrer(lstCola);
             fila.Recorrer();
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -38,15 +41,16 @@ namespace pryEstructuraDeDatos
                 lblTramite.Text = fila.Primero.Tramite;
                 fila.Eliminar();
                 fila.Recorrer(dgvGrilla);
+                fila.Recorrer(lstCola);
                 fila.Recorrer();
 
 
             }
             else
             {
-                txtCodigo.Text = "";//que limpia esto preguntar 
-                txtNombre.Text = "";
-                txtTramite.Text = "";
+                lblCodigo.Text = "";//que limpia esto preguntar 
+                lblNombre2.Text = "";
+                lblTramite.Text = "";
 
             }
         }

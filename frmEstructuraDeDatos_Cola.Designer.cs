@@ -34,23 +34,23 @@
             this.TRAMITE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbElementoEliminado = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.txtTramite2 = new System.Windows.Forms.TextBox();
-            this.txtNombre2 = new System.Windows.Forms.TextBox();
-            this.txtCodigo2 = new System.Windows.Forms.TextBox();
-            this.lblTramite2 = new System.Windows.Forms.Label();
-            this.lblNombre2 = new System.Windows.Forms.Label();
-            this.lblCodigo2 = new System.Windows.Forms.Label();
+            this.lbTramite2 = new System.Windows.Forms.Label();
+            this.lbNombre2 = new System.Windows.Forms.Label();
+            this.lbCodigo2 = new System.Windows.Forms.Label();
             this.gbNuevoElemento = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtTramite = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lblTramite = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lbTramite = new System.Windows.Forms.Label();
+            this.lbNombre = new System.Windows.Forms.Label();
+            this.lbCodigo = new System.Windows.Forms.Label();
             this.gbListado = new System.Windows.Forms.GroupBox();
             this.lstCola = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTramite = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblNombre2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.gbElementoEliminado.SuspendLayout();
             this.gbNuevoElemento.SuspendLayout();
@@ -87,13 +87,13 @@
             // 
             // gbElementoEliminado
             // 
-            this.gbElementoEliminado.Controls.Add(this.btnEliminar);
-            this.gbElementoEliminado.Controls.Add(this.txtTramite2);
-            this.gbElementoEliminado.Controls.Add(this.txtNombre2);
-            this.gbElementoEliminado.Controls.Add(this.txtCodigo2);
-            this.gbElementoEliminado.Controls.Add(this.lblTramite2);
+            this.gbElementoEliminado.Controls.Add(this.lblTramite);
+            this.gbElementoEliminado.Controls.Add(this.lblCodigo);
             this.gbElementoEliminado.Controls.Add(this.lblNombre2);
-            this.gbElementoEliminado.Controls.Add(this.lblCodigo2);
+            this.gbElementoEliminado.Controls.Add(this.btnEliminar);
+            this.gbElementoEliminado.Controls.Add(this.lbTramite2);
+            this.gbElementoEliminado.Controls.Add(this.lbNombre2);
+            this.gbElementoEliminado.Controls.Add(this.lbCodigo2);
             this.gbElementoEliminado.Location = new System.Drawing.Point(470, 5);
             this.gbElementoEliminado.Name = "gbElementoEliminado";
             this.gbElementoEliminado.Size = new System.Drawing.Size(212, 227);
@@ -111,53 +111,32 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // txtTramite2
+            // lbTramite2
             // 
-            this.txtTramite2.Location = new System.Drawing.Point(102, 99);
-            this.txtTramite2.Name = "txtTramite2";
-            this.txtTramite2.Size = new System.Drawing.Size(100, 20);
-            this.txtTramite2.TabIndex = 8;
+            this.lbTramite2.AutoSize = true;
+            this.lbTramite2.Location = new System.Drawing.Point(22, 109);
+            this.lbTramite2.Name = "lbTramite2";
+            this.lbTramite2.Size = new System.Drawing.Size(45, 13);
+            this.lbTramite2.TabIndex = 5;
+            this.lbTramite2.Text = "Trámite:";
             // 
-            // txtNombre2
+            // lbNombre2
             // 
-            this.txtNombre2.Location = new System.Drawing.Point(102, 67);
-            this.txtNombre2.Name = "txtNombre2";
-            this.txtNombre2.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre2.TabIndex = 7;
+            this.lbNombre2.AutoSize = true;
+            this.lbNombre2.Location = new System.Drawing.Point(22, 74);
+            this.lbNombre2.Name = "lbNombre2";
+            this.lbNombre2.Size = new System.Drawing.Size(47, 13);
+            this.lbNombre2.TabIndex = 4;
+            this.lbNombre2.Text = "Nombre:";
             // 
-            // txtCodigo2
+            // lbCodigo2
             // 
-            this.txtCodigo2.Location = new System.Drawing.Point(134, 38);
-            this.txtCodigo2.Name = "txtCodigo2";
-            this.txtCodigo2.Size = new System.Drawing.Size(68, 20);
-            this.txtCodigo2.TabIndex = 6;
-            // 
-            // lblTramite2
-            // 
-            this.lblTramite2.AutoSize = true;
-            this.lblTramite2.Location = new System.Drawing.Point(26, 102);
-            this.lblTramite2.Name = "lblTramite2";
-            this.lblTramite2.Size = new System.Drawing.Size(45, 13);
-            this.lblTramite2.TabIndex = 5;
-            this.lblTramite2.Text = "Trámite:";
-            // 
-            // lblNombre2
-            // 
-            this.lblNombre2.AutoSize = true;
-            this.lblNombre2.Location = new System.Drawing.Point(26, 70);
-            this.lblNombre2.Name = "lblNombre2";
-            this.lblNombre2.Size = new System.Drawing.Size(47, 13);
-            this.lblNombre2.TabIndex = 4;
-            this.lblNombre2.Text = "Nombre:";
-            // 
-            // lblCodigo2
-            // 
-            this.lblCodigo2.AutoSize = true;
-            this.lblCodigo2.Location = new System.Drawing.Point(26, 41);
-            this.lblCodigo2.Name = "lblCodigo2";
-            this.lblCodigo2.Size = new System.Drawing.Size(43, 13);
-            this.lblCodigo2.TabIndex = 3;
-            this.lblCodigo2.Text = "Código:";
+            this.lbCodigo2.AutoSize = true;
+            this.lbCodigo2.Location = new System.Drawing.Point(26, 38);
+            this.lbCodigo2.Name = "lbCodigo2";
+            this.lbCodigo2.Size = new System.Drawing.Size(43, 13);
+            this.lbCodigo2.TabIndex = 3;
+            this.lbCodigo2.Text = "Código:";
             // 
             // gbNuevoElemento
             // 
@@ -165,9 +144,9 @@
             this.gbNuevoElemento.Controls.Add(this.txtTramite);
             this.gbNuevoElemento.Controls.Add(this.txtNombre);
             this.gbNuevoElemento.Controls.Add(this.txtCodigo);
-            this.gbNuevoElemento.Controls.Add(this.lblTramite);
-            this.gbNuevoElemento.Controls.Add(this.lblNombre);
-            this.gbNuevoElemento.Controls.Add(this.lblCodigo);
+            this.gbNuevoElemento.Controls.Add(this.lbTramite);
+            this.gbNuevoElemento.Controls.Add(this.lbNombre);
+            this.gbNuevoElemento.Controls.Add(this.lbCodigo);
             this.gbNuevoElemento.Location = new System.Drawing.Point(245, 5);
             this.gbNuevoElemento.Name = "gbNuevoElemento";
             this.gbNuevoElemento.Size = new System.Drawing.Size(219, 227);
@@ -187,51 +166,51 @@
             // 
             // txtTramite
             // 
-            this.txtTramite.Location = new System.Drawing.Point(88, 102);
+            this.txtTramite.Location = new System.Drawing.Point(88, 106);
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(100, 20);
             this.txtTramite.TabIndex = 5;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(88, 67);
+            this.txtNombre.Location = new System.Drawing.Point(88, 70);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 4;
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(123, 38);
+            this.txtCodigo.Location = new System.Drawing.Point(123, 41);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(65, 20);
             this.txtCodigo.TabIndex = 3;
             // 
-            // lblTramite
+            // lbTramite
             // 
-            this.lblTramite.AutoSize = true;
-            this.lblTramite.Location = new System.Drawing.Point(13, 106);
-            this.lblTramite.Name = "lblTramite";
-            this.lblTramite.Size = new System.Drawing.Size(45, 13);
-            this.lblTramite.TabIndex = 2;
-            this.lblTramite.Text = "Trámite:";
+            this.lbTramite.AutoSize = true;
+            this.lbTramite.Location = new System.Drawing.Point(21, 109);
+            this.lbTramite.Name = "lbTramite";
+            this.lbTramite.Size = new System.Drawing.Size(45, 13);
+            this.lbTramite.TabIndex = 2;
+            this.lbTramite.Text = "Trámite:";
             // 
-            // lblNombre
+            // lbNombre
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(13, 70);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Nombre:";
+            this.lbNombre.AutoSize = true;
+            this.lbNombre.Location = new System.Drawing.Point(21, 74);
+            this.lbNombre.Name = "lbNombre";
+            this.lbNombre.Size = new System.Drawing.Size(47, 13);
+            this.lbNombre.TabIndex = 1;
+            this.lbNombre.Text = "Nombre:";
             // 
-            // lblCodigo
+            // lbCodigo
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(13, 41);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
-            this.lblCodigo.TabIndex = 0;
-            this.lblCodigo.Text = "Código:";
+            this.lbCodigo.AutoSize = true;
+            this.lbCodigo.Location = new System.Drawing.Point(21, 41);
+            this.lbCodigo.Name = "lbCodigo";
+            this.lbCodigo.Size = new System.Drawing.Size(43, 13);
+            this.lbCodigo.TabIndex = 0;
+            this.lbCodigo.Text = "Código:";
             // 
             // gbListado
             // 
@@ -261,6 +240,30 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            // 
+            // lblTramite
+            // 
+            this.lblTramite.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTramite.Location = new System.Drawing.Point(76, 102);
+            this.lblTramite.Name = "lblTramite";
+            this.lblTramite.Size = new System.Drawing.Size(114, 23);
+            this.lblTramite.TabIndex = 12;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCodigo.Location = new System.Drawing.Point(102, 35);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(88, 23);
+            this.lblCodigo.TabIndex = 10;
+            // 
+            // lblNombre2
+            // 
+            this.lblNombre2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombre2.Location = new System.Drawing.Point(76, 67);
+            this.lblNombre2.Name = "lblNombre2";
+            this.lblNombre2.Size = new System.Drawing.Size(114, 23);
+            this.lblNombre2.TabIndex = 11;
             // 
             // frmEstructuraDeDatos_Cola
             // 
@@ -294,21 +297,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TRAMITE;
         private System.Windows.Forms.GroupBox gbElementoEliminado;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.TextBox txtTramite2;
-        private System.Windows.Forms.TextBox txtNombre2;
-        private System.Windows.Forms.TextBox txtCodigo2;
-        private System.Windows.Forms.Label lblTramite2;
-        private System.Windows.Forms.Label lblNombre2;
-        private System.Windows.Forms.Label lblCodigo2;
+        private System.Windows.Forms.Label lbTramite2;
+        private System.Windows.Forms.Label lbNombre2;
+        private System.Windows.Forms.Label lbCodigo2;
         private System.Windows.Forms.GroupBox gbNuevoElemento;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox txtTramite;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label lblTramite;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lbTramite;
+        private System.Windows.Forms.Label lbNombre;
+        private System.Windows.Forms.Label lbCodigo;
         private System.Windows.Forms.GroupBox gbListado;
         private System.Windows.Forms.ListBox lstCola;
+        private System.Windows.Forms.Label lblTramite;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblNombre2;
     }
 }

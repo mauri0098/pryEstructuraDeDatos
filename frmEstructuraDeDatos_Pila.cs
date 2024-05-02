@@ -26,11 +26,11 @@ namespace pryEstructuraDeDatos
                 obj.Nombre = txtNombre.Text;
                 obj.Tramite = txtTramite.Text;
 
-                // Verifica si el nombre contiene caracteres que no son letras
+                
                 if (!string.IsNullOrWhiteSpace(txtNombre.Text) && !txtNombre.Text.All(char.IsLetter))
                 {
                     MessageBox.Show("El nombre solo puede contener letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; // Sale del método para evitar que se agregue el nodo
+                    return; 
                 }
 
 

@@ -19,15 +19,32 @@ namespace pryEstructuraDeDatos
         clsListaSimple simple = new clsListaSimple();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo obj = new clsNodo();
-            obj.Codigo = Convert.ToInt32(txtCodigo.Text);
-            obj.Nombre = txtNombre.Text;
-            obj.Tramite = txtTramite.Text;
-            simple.Agregar(obj);
-            simple.Recorrer(dgvGrilla);
-            simple.Recorrer(lst);
-            simple.Recorrer(cbEliminar);
-            simple.Recorrer();
+            try
+            {
+                clsNodo obj = new clsNodo();
+                obj.Codigo = Convert.ToInt32(txtCodigo.Text);
+                obj.Nombre = txtNombre.Text;
+                obj.Tramite = txtTramite.Text;
+
+
+                if (!string.IsNullOrWhiteSpace(txtNombre.Text) && !txtNombre.Text.All(char.IsLetter))
+                {
+                    MessageBox.Show("El nombre solo puede contener letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                simple.Agregar(obj);
+                simple.Recorrer(dgvGrilla);
+                simple.Recorrer(lst);
+                simple.Recorrer(cbEliminar);
+                simple.Recorrer();
+
+
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("El código debe ser un número entero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

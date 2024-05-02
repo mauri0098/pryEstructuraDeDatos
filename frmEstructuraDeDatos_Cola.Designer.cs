@@ -35,7 +35,7 @@
             this.gbElementoEliminado = new System.Windows.Forms.GroupBox();
             this.lblTramite = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblNombre2 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lbTramite2 = new System.Windows.Forms.Label();
             this.lbNombre2 = new System.Windows.Forms.Label();
@@ -89,7 +89,7 @@
             // 
             this.gbElementoEliminado.Controls.Add(this.lblTramite);
             this.gbElementoEliminado.Controls.Add(this.lblCodigo);
-            this.gbElementoEliminado.Controls.Add(this.lblNombre2);
+            this.gbElementoEliminado.Controls.Add(this.lblNombre);
             this.gbElementoEliminado.Controls.Add(this.btnEliminar);
             this.gbElementoEliminado.Controls.Add(this.lbTramite2);
             this.gbElementoEliminado.Controls.Add(this.lbNombre2);
@@ -117,13 +117,13 @@
             this.lblCodigo.Size = new System.Drawing.Size(88, 23);
             this.lblCodigo.TabIndex = 10;
             // 
-            // lblNombre2
+            // lblNombre
             // 
-            this.lblNombre2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblNombre2.Location = new System.Drawing.Point(76, 67);
-            this.lblNombre2.Name = "lblNombre2";
-            this.lblNombre2.Size = new System.Drawing.Size(114, 23);
-            this.lblNombre2.TabIndex = 11;
+            this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombre.Location = new System.Drawing.Point(76, 67);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(114, 23);
+            this.lblNombre.TabIndex = 11;
             // 
             // btnEliminar
             // 
@@ -314,6 +314,6 @@
         private System.Windows.Forms.ListBox lstCola;
         private System.Windows.Forms.Label lblTramite;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.Label lblNombre2;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

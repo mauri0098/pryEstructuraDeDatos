@@ -27,20 +27,29 @@ namespace pryEstructuraDeDatos
             Pila.Recorrer(dgvGrilla);
             Pila.Recorrer(lstPila);
             Pila.Recorrer();
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (Pila.Primero != null)
             {
-                lblCodigo.Text = Pila.Primero.Codigo.ToString();
+                lblCodigo2.Text = Pila.Primero.Codigo.ToString();
                 lblNombre2.Text = Pila.Primero.Nombre;
-                lblTramite.Text = Pila.Primero.Tramite;
+                lblTramite2.Text = Pila.Primero.Tramite;
                 Pila.Eliminar();
                 Pila.Recorrer(dgvGrilla);
                 Pila.Recorrer();
 
 
+            }
+            else
+            {
+                lblCodigo2.Text = "";
+                lblNombre2.Text = "";
+                lblTramite2.Text = "";
             }
         }
     }

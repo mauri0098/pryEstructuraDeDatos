@@ -35,13 +35,13 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TRAMITE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbElementoEliminado = new System.Windows.Forms.GroupBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.txtTramite2 = new System.Windows.Forms.TextBox();
-            this.txtNombre2 = new System.Windows.Forms.TextBox();
-            this.txtCodigo2 = new System.Windows.Forms.TextBox();
             this.lblTramite2 = new System.Windows.Forms.Label();
-            this.lblNombre2 = new System.Windows.Forms.Label();
             this.lblCodigo2 = new System.Windows.Forms.Label();
+            this.lblNombre2 = new System.Windows.Forms.Label();
+            this.lbTramite2 = new System.Windows.Forms.Label();
+            this.lbNombre2 = new System.Windows.Forms.Label();
+            this.lbCodigo2 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.gbNuevoElemento = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtTramite = new System.Windows.Forms.TextBox();
@@ -106,13 +106,13 @@
             // 
             // gbElementoEliminado
             // 
-            this.gbElementoEliminado.Controls.Add(this.btnEliminar);
-            this.gbElementoEliminado.Controls.Add(this.txtTramite2);
-            this.gbElementoEliminado.Controls.Add(this.txtNombre2);
-            this.gbElementoEliminado.Controls.Add(this.txtCodigo2);
             this.gbElementoEliminado.Controls.Add(this.lblTramite2);
-            this.gbElementoEliminado.Controls.Add(this.lblNombre2);
             this.gbElementoEliminado.Controls.Add(this.lblCodigo2);
+            this.gbElementoEliminado.Controls.Add(this.lblNombre2);
+            this.gbElementoEliminado.Controls.Add(this.lbTramite2);
+            this.gbElementoEliminado.Controls.Add(this.lbNombre2);
+            this.gbElementoEliminado.Controls.Add(this.lbCodigo2);
+            this.gbElementoEliminado.Controls.Add(this.btnEliminar);
             this.gbElementoEliminado.Location = new System.Drawing.Point(465, 2);
             this.gbElementoEliminado.Name = "gbElementoEliminado";
             this.gbElementoEliminado.Size = new System.Drawing.Size(212, 227);
@@ -120,63 +120,66 @@
             this.gbElementoEliminado.TabStop = false;
             this.gbElementoEliminado.Text = "Elemento Eliminado";
             // 
+            // lblTramite2
+            // 
+            this.lblTramite2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTramite2.Location = new System.Drawing.Point(74, 102);
+            this.lblTramite2.Name = "lblTramite2";
+            this.lblTramite2.Size = new System.Drawing.Size(114, 23);
+            this.lblTramite2.TabIndex = 18;
+            // 
+            // lblCodigo2
+            // 
+            this.lblCodigo2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCodigo2.Location = new System.Drawing.Point(100, 35);
+            this.lblCodigo2.Name = "lblCodigo2";
+            this.lblCodigo2.Size = new System.Drawing.Size(88, 23);
+            this.lblCodigo2.TabIndex = 16;
+            // 
+            // lblNombre2
+            // 
+            this.lblNombre2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblNombre2.Location = new System.Drawing.Point(74, 67);
+            this.lblNombre2.Name = "lblNombre2";
+            this.lblNombre2.Size = new System.Drawing.Size(114, 23);
+            this.lblNombre2.TabIndex = 17;
+            // 
+            // lbTramite2
+            // 
+            this.lbTramite2.AutoSize = true;
+            this.lbTramite2.Location = new System.Drawing.Point(20, 109);
+            this.lbTramite2.Name = "lbTramite2";
+            this.lbTramite2.Size = new System.Drawing.Size(45, 13);
+            this.lbTramite2.TabIndex = 15;
+            this.lbTramite2.Text = "Trámite:";
+            // 
+            // lbNombre2
+            // 
+            this.lbNombre2.AutoSize = true;
+            this.lbNombre2.Location = new System.Drawing.Point(20, 74);
+            this.lbNombre2.Name = "lbNombre2";
+            this.lbNombre2.Size = new System.Drawing.Size(47, 13);
+            this.lbNombre2.TabIndex = 14;
+            this.lbNombre2.Text = "Nombre:";
+            // 
+            // lbCodigo2
+            // 
+            this.lbCodigo2.AutoSize = true;
+            this.lbCodigo2.Location = new System.Drawing.Point(22, 38);
+            this.lbCodigo2.Name = "lbCodigo2";
+            this.lbCodigo2.Size = new System.Drawing.Size(43, 13);
+            this.lbCodigo2.TabIndex = 13;
+            this.lbCodigo2.Text = "Código:";
+            // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(29, 157);
+            this.btnEliminar.Location = new System.Drawing.Point(23, 157);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(161, 37);
+            this.btnEliminar.Size = new System.Drawing.Size(165, 37);
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // txtTramite2
-            // 
-            this.txtTramite2.Location = new System.Drawing.Point(102, 99);
-            this.txtTramite2.Name = "txtTramite2";
-            this.txtTramite2.Size = new System.Drawing.Size(100, 20);
-            this.txtTramite2.TabIndex = 8;
-            // 
-            // txtNombre2
-            // 
-            this.txtNombre2.Location = new System.Drawing.Point(102, 67);
-            this.txtNombre2.Name = "txtNombre2";
-            this.txtNombre2.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre2.TabIndex = 7;
-            // 
-            // txtCodigo2
-            // 
-            this.txtCodigo2.Location = new System.Drawing.Point(134, 38);
-            this.txtCodigo2.Name = "txtCodigo2";
-            this.txtCodigo2.Size = new System.Drawing.Size(68, 20);
-            this.txtCodigo2.TabIndex = 6;
-            // 
-            // lblTramite2
-            // 
-            this.lblTramite2.AutoSize = true;
-            this.lblTramite2.Location = new System.Drawing.Point(26, 102);
-            this.lblTramite2.Name = "lblTramite2";
-            this.lblTramite2.Size = new System.Drawing.Size(45, 13);
-            this.lblTramite2.TabIndex = 5;
-            this.lblTramite2.Text = "Trámite:";
-            // 
-            // lblNombre2
-            // 
-            this.lblNombre2.AutoSize = true;
-            this.lblNombre2.Location = new System.Drawing.Point(26, 70);
-            this.lblNombre2.Name = "lblNombre2";
-            this.lblNombre2.Size = new System.Drawing.Size(47, 13);
-            this.lblNombre2.TabIndex = 4;
-            this.lblNombre2.Text = "Nombre:";
-            // 
-            // lblCodigo2
-            // 
-            this.lblCodigo2.AutoSize = true;
-            this.lblCodigo2.Location = new System.Drawing.Point(26, 41);
-            this.lblCodigo2.Name = "lblCodigo2";
-            this.lblCodigo2.Size = new System.Drawing.Size(43, 13);
-            this.lblCodigo2.TabIndex = 3;
-            this.lblCodigo2.Text = "Código:";
             // 
             // gbNuevoElemento
             // 
@@ -296,12 +299,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox gbElementoEliminado;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.TextBox txtTramite2;
-        private System.Windows.Forms.TextBox txtNombre2;
-        private System.Windows.Forms.TextBox txtCodigo2;
-        private System.Windows.Forms.Label lblTramite2;
-        private System.Windows.Forms.Label lblNombre2;
-        private System.Windows.Forms.Label lblCodigo2;
         private System.Windows.Forms.GroupBox gbNuevoElemento;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox txtTramite;
@@ -310,5 +307,11 @@
         private System.Windows.Forms.Label lblTramite;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblTramite2;
+        private System.Windows.Forms.Label lblCodigo2;
+        private System.Windows.Forms.Label lblNombre2;
+        private System.Windows.Forms.Label lbTramite2;
+        private System.Windows.Forms.Label lbNombre2;
+        private System.Windows.Forms.Label lbCodigo2;
     }
 }

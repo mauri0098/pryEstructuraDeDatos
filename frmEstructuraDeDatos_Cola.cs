@@ -19,17 +19,30 @@ namespace pryEstructuraDeDatos
         clsCola fila = new clsCola();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo obj = new clsNodo();
-            obj.Codigo = Convert.ToInt32(txtCodigo.Text);
-            obj.Nombre = txtNombre.Text;
-            obj.Tramite = txtTramite.Text;
-            fila.Agregar(obj);
-            fila.Recorrer(dgvGrilla);
-            fila.Recorrer(lstCola);
-            fila.Recorrer();
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+            try
+            {
+                int codigo = Convert.ToInt32(txtCodigo.Text);
+                string nombre = txtNombre.Text;
+                string tramite = txtTramite.Text;
+
+                clsNodo obj = new clsNodo();
+                obj.Codigo = codigo;
+                obj.Nombre = nombre;
+                obj.Tramite = tramite;
+
+                fila.Agregar(obj);
+                fila.Recorrer(dgvGrilla);
+                fila.Recorrer(lstCola);
+                fila.Recorrer();
+
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("El código debe ser un número entero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -37,7 +50,7 @@ namespace pryEstructuraDeDatos
             if (fila.Primero != null)
             {
                 lblCodigo.Text = fila.Primero.Codigo.ToString();
-                lblNombre2.Text = fila.Primero.Nombre;
+                lblNombre.Text = fila.Primero.Nombre;
                 lblTramite.Text = fila.Primero.Tramite;
                 fila.Eliminar();
                 fila.Recorrer(dgvGrilla);
@@ -49,16 +62,19 @@ namespace pryEstructuraDeDatos
             else
             {
                 lblCodigo.Text = "";//que limpia esto preguntar 
-                lblNombre2.Text = "";
+                lblNombre.Text = "";
                 lblTramite.Text = "";
 
             }
 
         }
-
+        int numero = 0;
+        string letra = "";
+        
         private void txtCodigo_TextChanged(object sender, EventArgs e)
         {
             btnAgregar.Enabled = !string.IsNullOrWhiteSpace(txtCodigo.Text);
+            
         }
 
         private void frmEstructuraDeDatos_Cola_Load(object sender, EventArgs e)

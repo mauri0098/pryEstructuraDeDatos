@@ -17,6 +17,7 @@ namespace pryEstructuraDeDatos
             InitializeComponent();
         }
         clsCola fila = new clsCola();
+        string letra = "";
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
@@ -24,6 +25,13 @@ namespace pryEstructuraDeDatos
                 int codigo = Convert.ToInt32(txtCodigo.Text);
                 string nombre = txtNombre.Text;
                 string tramite = txtTramite.Text;
+
+                // Verifica si el nombre contiene caracteres que no son letras
+                if (!string.IsNullOrWhiteSpace(nombre) && !nombre.All(char.IsLetter))
+                {
+                    MessageBox.Show("El nombre solo puede contener letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Sale del método para evitar que se agregue el nodo
+                }
 
                 clsNodo obj = new clsNodo();
                 obj.Codigo = codigo;
@@ -68,9 +76,6 @@ namespace pryEstructuraDeDatos
             }
 
         }
-        int numero = 0;
-        string letra = "";
-        
         private void txtCodigo_TextChanged(object sender, EventArgs e)
         {
             btnAgregar.Enabled = !string.IsNullOrWhiteSpace(txtCodigo.Text);

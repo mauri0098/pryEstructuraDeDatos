@@ -19,17 +19,33 @@ namespace pryEstructuraDeDatos
         clsPila Pila = new clsPila();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo obj = new clsNodo();
-            obj.Codigo = Convert.ToInt32(txtCodigo.Text);
-            obj.Nombre = txtNombre.Text;
-            obj.Tramite = txtTramite.Text;
-            Pila.Agregar(obj);
-            Pila.Recorrer(dgvGrilla);
-            Pila.Recorrer(lstPila);
-            Pila.Recorrer();
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+            try
+            {
+                clsNodo obj = new clsNodo();
+                obj.Codigo = Convert.ToInt32(txtCodigo.Text);
+                obj.Nombre = txtNombre.Text;
+                obj.Tramite = txtTramite.Text;
+
+                // Verifica si el nombre contiene caracteres que no son letras
+                if (!string.IsNullOrWhiteSpace(txtNombre.Text) && !txtNombre.Text.All(char.IsLetter))
+                {
+                    MessageBox.Show("El nombre solo puede contener letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Sale del método para evitar que se agregue el nodo
+                }
+
+
+                Pila.Agregar(obj);
+                Pila.Recorrer(dgvGrilla);
+                Pila.Recorrer(lstPila);
+                Pila.Recorrer();
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtTramite.Text = "";
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("El código debe ser un número entero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -41,8 +57,8 @@ namespace pryEstructuraDeDatos
                 lblTramite2.Text = Pila.Primero.Tramite;
                 Pila.Eliminar();
                 Pila.Recorrer(dgvGrilla);
+                Pila.Recorrer(lstPila);
                 Pila.Recorrer();
-
 
             }
             else
@@ -51,6 +67,24 @@ namespace pryEstructuraDeDatos
                 lblNombre2.Text = "";
                 lblTramite2.Text = "";
             }
+        }
+
+        private void frmEstructuraDeDatos_Pila_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            btnAgregar.Enabled = !string.IsNullOrWhiteSpace(txtCodigo.Text);
+        }
+
+        private void frmEstructuraDeDatos_Pila_Load(object sender, EventArgs e)
+        {
+            btnAgregar.Enabled = false;
         }
     }
 }

@@ -227,6 +227,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(65, 20);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // lblTramite
             // 
@@ -277,6 +278,8 @@
             this.Name = "frmEstructuraDeDatos_Pila";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EstructuraDeDatos_Pila";
+            this.Load += new System.EventHandler(this.frmEstructuraDeDatos_Pila_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmEstructuraDeDatos_Pila_KeyPress);
             this.gbListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.gbElementoEliminado.ResumeLayout(false);

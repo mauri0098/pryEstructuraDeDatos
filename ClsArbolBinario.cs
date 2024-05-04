@@ -53,12 +53,12 @@ namespace pryEstructuraDeDatos
                 }
             }
         }
-        public void Recorrer(ComboBox Lista)
+        //In Order Asendente 
+        public void RecorrerInOrderCombo(ComboBox Lista)
         {
             Lista.Items.Clear();
             inOrden(Lista, Raiz);
         }
-       //in order asendente 
         public void inOrden(ComboBox Lista , clsNodo Raiz)
         {
             if (Raiz.Izquierdo != null)
@@ -72,14 +72,11 @@ namespace pryEstructuraDeDatos
                 inOrden(Lista, Raiz.Derecho);
 
             }
-
-
         }
-        public void Recorrer(DataGridView Grilla)
+        public void RecorrerInOrderDataGrid(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
             inOrden(Grilla, Raiz);
-
         }
         public void inOrden(DataGridView Grilla,clsNodo Raiz)
         {
@@ -94,12 +91,27 @@ namespace pryEstructuraDeDatos
                 inOrden(Grilla, Raiz.Derecho);
 
             }
+        }
+        public void RecorrerInOrderStreamWriter()
+        {
+            StreamWriter AD = new StreamWriter("ArbolBinarioInOrden.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            RecorrerInOrdenstreamWriter(Raiz, AD);
+            AD.Close();
+        }
 
-
+        private void RecorrerInOrdenstreamWriter(clsNodo Raiz, StreamWriter Writer)
+        {
+            if (Raiz != null)
+            {
+                RecorrerInOrdenstreamWriter(Raiz.Izquierdo, Writer);
+                Writer.Write($"{Raiz.Codigo};{Raiz.Nombre};{Raiz.Tramite}\n");
+                RecorrerInOrdenstreamWriter(Raiz.Derecho, Writer);
+            }
         }
         
-        //IN ORDEN DESCENDENTE
-
+        //In Order Desendiente 
         public void RecorrerDescGrilla(DataGridView Grilla)
         {
             Grilla.Rows.Clear();

@@ -30,7 +30,7 @@ namespace pryEstructuraDeDatos
             txtNombre.Text = "";
             txtTramite.Text = "";
 
-            Arbol.Recorrer(dgvGrilla);
+            Arbol.RecorrerInOrderDataGrid(dgvGrilla);
             Arbol.Recorrertree(treeView1);
            
 
@@ -41,11 +41,9 @@ namespace pryEstructuraDeDatos
         {
             if (rdInOrden.Checked == true)
             {
-                Arbol.Recorrer(dgvGrilla);
-                Arbol.Recorrer(cbEliminar);
-               
-               
-                
+                Arbol.RecorrerInOrderDataGrid(dgvGrilla);
+                Arbol.RecorrerInOrderCombo(cbEliminar);
+                Arbol.RecorrerInOrderStreamWriter();
             }
         }
 
@@ -92,9 +90,9 @@ namespace pryEstructuraDeDatos
             {
                 Int32 x = Convert.ToInt32(cbEliminar.Text);
                 Arbol.Eliminar(x);
-                Arbol.Recorrer(dgvGrilla);
+                Arbol.RecorrerInOrderDataGrid(dgvGrilla);
                 Arbol.Recorrertree(treeView1);
-                Arbol.Recorrer(cbEliminar); 
+                Arbol.RecorrerInOrderCombo(cbEliminar); 
 
             }
             else

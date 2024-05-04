@@ -44,6 +44,7 @@ namespace pryEstructuraDeDatos
                 Arbol.Recorrer(dgvGrilla);
                 Arbol.Recorrer(cbEliminar);
                
+               
                 
             }
         }
@@ -76,6 +77,7 @@ namespace pryEstructuraDeDatos
             if (rdPostOrden.Checked ==  true)
             {
                 Arbol.RecorrerPostOrdenGrilla(dgvGrilla);
+                Arbol.RecorrerPostOrdenAD();
           
              
 

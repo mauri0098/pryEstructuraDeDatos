@@ -32,6 +32,7 @@ namespace pryEstructuraDeDatos
 
             Arbol.RecorrerInOrderDataGrid(dgvGrilla);
             Arbol.Recorrertree(treeView1);
+            Arbol.RecorrerInOrderCombo(cbEliminar);
            
 
 
@@ -86,6 +87,7 @@ namespace pryEstructuraDeDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+           btnEliminar.Enabled = false;
             if (cbEliminar.SelectedIndex != -1)
             {
                 Int32 x = Convert.ToInt32(cbEliminar.Text);
@@ -93,12 +95,39 @@ namespace pryEstructuraDeDatos
                 Arbol.RecorrerInOrderDataGrid(dgvGrilla);
                 Arbol.Recorrertree(treeView1);
                 Arbol.RecorrerInOrderCombo(cbEliminar); 
-
+               
             }
             else
             {
+                
                 MessageBox.Show("Falta Selecionar Elemento ");
             }
+
+        }
+
+        private void cbEliminar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbEliminar.SelectedIndex ==cbEliminar.Items.Count -1)
+            {
+                btnEliminar.Enabled = false;
+            }
+            else
+            {
+                btnEliminar.Enabled = true;
+            }
+        }
+
+        private void btnEquilibrar_Click(object sender, EventArgs e)
+        {
+            Arbol.Equilibrar();
+            Arbol.RecorrerInOrderDataGrid(dgvGrilla);
+            Arbol.Recorrertree(treeView1);
+            Arbol.RecorrerInOrderCombo(cbEliminar);
+            
+            
+
+
+
         }
     }
 }

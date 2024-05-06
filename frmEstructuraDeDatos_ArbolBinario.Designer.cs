@@ -166,6 +166,7 @@
             this.cbEliminar.Name = "cbEliminar";
             this.cbEliminar.Size = new System.Drawing.Size(115, 23);
             this.cbEliminar.TabIndex = 10;
+            this.cbEliminar.SelectedIndexChanged += new System.EventHandler(this.cbEliminar_SelectedIndexChanged);
             // 
             // btnEliminar
             // 
@@ -270,6 +271,7 @@
             this.btnEquilibrar.TabIndex = 24;
             this.btnEquilibrar.Text = "Equilibrar";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
+            this.btnEquilibrar.Click += new System.EventHandler(this.btnEquilibrar_Click);
             // 
             // treeView1
             // 

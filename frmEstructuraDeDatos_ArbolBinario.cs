@@ -26,15 +26,15 @@ namespace pryEstructuraDeDatos
 
             Arbol.Agregar(objNodo);
 
+           
+
+            Arbol.RecorrerInOrderDataGrid(dgvGrilla);
+            Arbol.Recorrertree(tvwArbolBinario);
+            Arbol.RecorrerInOrderCombo(cbEliminar);
+
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
-
-            Arbol.RecorrerInOrderDataGrid(dgvGrilla);
-            Arbol.Recorrertree(treeView1);
-            Arbol.RecorrerInOrderCombo(cbEliminar);
-           
-
 
         }
 
@@ -53,7 +53,7 @@ namespace pryEstructuraDeDatos
             if (rdPreOrden.Checked == true)
             {
                 Arbol.RecorrerPreOrden(dgvGrilla);
-                Arbol.Recorrertree(treeView1);
+                Arbol.Recorrertree(tvwArbolBinario);
                 Arbol.RecorrerPreOrden();
                
 
@@ -67,7 +67,7 @@ namespace pryEstructuraDeDatos
             {
                 Arbol.RecorrerDescGrilla(dgvGrilla);
                 Arbol.RecorrerComboDesc(cbEliminar);
-                Arbol.RecorrerInOrdenDescAD();
+                Arbol.RecorrerInOrdenDesc();
             }
         }
 
@@ -76,11 +76,8 @@ namespace pryEstructuraDeDatos
             if (rdPostOrden.Checked ==  true)
             {
                 Arbol.RecorrerPostOrdenGrilla(dgvGrilla);
-                Arbol.RecorrerPostOrdenAD();
-          
-             
-
-
+                Arbol.RecorrerPostOrden();
+         
 
             }
         }
@@ -93,7 +90,7 @@ namespace pryEstructuraDeDatos
                 Int32 x = Convert.ToInt32(cbEliminar.Text);
                 Arbol.Eliminar(x);
                 Arbol.RecorrerInOrderDataGrid(dgvGrilla);
-                Arbol.Recorrertree(treeView1);
+                Arbol.Recorrertree(tvwArbolBinario);
                 Arbol.RecorrerInOrderCombo(cbEliminar); 
                
             }
@@ -121,13 +118,21 @@ namespace pryEstructuraDeDatos
         {
             Arbol.Equilibrar();
             Arbol.RecorrerInOrderDataGrid(dgvGrilla);
-            Arbol.Recorrertree(treeView1);
+            Arbol.Recorrertree(tvwArbolBinario);
             Arbol.RecorrerInOrderCombo(cbEliminar);
-            
-            
+            Arbol.RecorrerInOrderStreamWriter();
 
 
 
+
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -50,7 +50,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnEquilibrar = new System.Windows.Forms.Button();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.tvwArbolBinario = new System.Windows.Forms.TreeView();
             this.gbListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.gbElementoEliminar.SuspendLayout();
@@ -234,6 +234,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(65, 21);
             this.txtCodigo.TabIndex = 3;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // lblTramite
             // 
@@ -273,19 +274,19 @@
             this.btnEquilibrar.UseVisualStyleBackColor = true;
             this.btnEquilibrar.Click += new System.EventHandler(this.btnEquilibrar_Click);
             // 
-            // treeView1
+            // tvwArbolBinario
             // 
-            this.treeView1.Location = new System.Drawing.Point(6, 5);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(230, 234);
-            this.treeView1.TabIndex = 28;
+            this.tvwArbolBinario.Location = new System.Drawing.Point(6, 5);
+            this.tvwArbolBinario.Name = "tvwArbolBinario";
+            this.tvwArbolBinario.Size = new System.Drawing.Size(230, 234);
+            this.tvwArbolBinario.TabIndex = 28;
             // 
             // frmEstructuraDeDatos_ArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 459);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.tvwArbolBinario);
             this.Controls.Add(this.btnEquilibrar);
             this.Controls.Add(this.gbListado);
             this.Controls.Add(this.gbElementoEliminar);
@@ -327,7 +328,7 @@
         private System.Windows.Forms.RadioButton rdInOrden;
         private System.Windows.Forms.RadioButton rdPreOrden;
         private System.Windows.Forms.RadioButton rdPostOrden;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView tvwArbolBinario;
         private System.Windows.Forms.RadioButton rdOrdenDesendente;
     }
 }

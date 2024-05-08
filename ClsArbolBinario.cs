@@ -117,17 +117,17 @@ namespace pryEstructuraDeDatos
             Grilla.Rows.Clear();
             InOrderDescGrilla(Grilla, Raiz);
         }
-        public void InOrderDescGrilla(DataGridView dgv, clsNodo R)
+        public void InOrderDescGrilla(DataGridView Grilla, clsNodo Raiz)
         {
-            if (R.Derecho != null)
+            if (Raiz.Derecho != null)
             {
-                InOrderDescGrilla(dgv, R.Derecho);
+                InOrderDescGrilla(Grilla, Raiz.Derecho);
             }
 
-            dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
-            if (R.Izquierdo != null)
+            Grilla.Rows.Add(Raiz.Codigo, Raiz.Nombre, Raiz.Tramite);
+            if (Raiz.Izquierdo != null)
             {
-                InOrderDescGrilla(dgv, R.Izquierdo);
+                InOrderDescGrilla(Grilla, Raiz.Izquierdo);
             }
         }
         public void RecorrerComboDesc(ComboBox Lista)
@@ -135,40 +135,40 @@ namespace pryEstructuraDeDatos
             Lista.Items.Clear();
             InOrderDescCombo(Lista, Raiz);
         }
-        public void InOrderDescCombo(ComboBox Lst, clsNodo R)
+        public void InOrderDescCombo(ComboBox Lista, clsNodo Raiz)
         {
-            if (R.Derecho != null)
+            if (Raiz.Derecho != null)
             {
-                InOrderDescCombo(Lst, R.Derecho);
+                InOrderDescCombo(Lista, Raiz.Derecho);
             }
 
-            Lst.Items.Add(R.Codigo);
-            if (R.Izquierdo != null)
+            Lista.Items.Add(Raiz.Codigo);
+            if (Raiz.Izquierdo != null)
             {
-                InOrderDescCombo(Lst, R.Izquierdo);
+                InOrderDescCombo(Lista, Raiz.Izquierdo);
             }
         }
-        public void RecorrerInOrdenDescAD()
+        public void RecorrerInOrdenDesc()
         {
             StreamWriter AD = new StreamWriter("ArbolBinarioInOrdenDesc.csv", false, Encoding.UTF8);
             AD.WriteLine("Lista de espera\n");
             AD.WriteLine("Codigo;Nombre;Tramite");
-            InOrdenDescAD(Raiz, AD);
+            InOrdenDesc(Raiz, AD);
             AD.Close();
         }
 
-        private void InOrdenDescAD(clsNodo R, StreamWriter writer)
+        private void InOrdenDesc(clsNodo R, StreamWriter writer)
         {
             if (R != null)
             {
-                InOrdenDescAD(R.Derecho, writer);
+                InOrdenDesc(R.Derecho, writer);
                 writer.Write($"{R.Codigo};{R.Nombre};{R.Tramite}\n");
-                InOrdenDescAD(R.Izquierdo, writer);
+                InOrdenDesc(R.Izquierdo, writer);
             }
         }
 
 
-        //PRE ORDER
+        //Pre Orden
         public void preOrden(clsNodo Raiz, TreeNode nodoTree)
         {
             TreeNode NodoPadre = new TreeNode(Raiz.Codigo.ToString());
@@ -303,21 +303,21 @@ namespace pryEstructuraDeDatos
             dgv.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
         }
 
-        public void RecorrerPostOrdenAD()
+        public void RecorrerPostOrden()
         {
             StreamWriter AD = new StreamWriter("ArbolBinarioPostOrden.csv", false, Encoding.UTF8);
             AD.WriteLine("Lista de espera\n");
             AD.WriteLine("Codigo;Nombre;Tramite");
-            PostOrdenAD(Raiz, AD);
+            PostOrden(Raiz, AD);
             AD.Close();
         }
 
-        private void PostOrdenAD(clsNodo R, StreamWriter writer)
+        private void PostOrden(clsNodo R, StreamWriter writer)
         {
             if (R != null)
             {
-                PostOrdenAD(R.Izquierdo, writer);
-                PostOrdenAD(R.Derecho, writer);
+                PostOrden(R.Izquierdo, writer);
+                PostOrden(R.Derecho, writer);
                 writer.Write($"{R.Codigo};{R.Nombre};{R.Tramite}\n");
             }
         }

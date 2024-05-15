@@ -80,6 +80,7 @@
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.lblConsultaEnSQL);
             this.Name = "frmBaseDatosConsulta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta en la Base de Datos";
             this.Load += new System.EventHandler(this.frmBaseDatosConsulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaEnSQL)).EndInit();

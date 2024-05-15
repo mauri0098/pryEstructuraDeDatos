@@ -182,6 +182,7 @@
             this.Controls.Add(this.gbOperacionesDeProyeccìon);
             this.Controls.Add(this.dgvBaseDeOperaciones);
             this.Name = "frmBaseDatosOperaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BaseDatosOperaciones";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaseDeOperaciones)).EndInit();
             this.gbOperacionesDeProyeccìon.ResumeLayout(false);

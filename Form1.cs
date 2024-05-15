@@ -68,5 +68,11 @@ namespace pryEstructuraDeDatos
         {
             this.Close();  
         }
+
+        private void operacioensConToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDatosOperaciones  BaseDatosOp = new frmBaseDatosOperaciones();
+            BaseDatosOp.ShowDialog();
+        }
     }
 }

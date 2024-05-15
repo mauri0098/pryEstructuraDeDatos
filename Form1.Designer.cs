@@ -73,14 +73,14 @@
             // datosDeAlumnoToolStripMenuItem
             // 
             this.datosDeAlumnoToolStripMenuItem.Name = "datosDeAlumnoToolStripMenuItem";
-            this.datosDeAlumnoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.datosDeAlumnoToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.datosDeAlumnoToolStripMenuItem.Text = "Datos De Alumno";
             this.datosDeAlumnoToolStripMenuItem.Click += new System.EventHandler(this.datosDeAlumnoToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -153,6 +153,7 @@
             this.operacioensConToolStripMenuItem.Name = "operacioensConToolStripMenuItem";
             this.operacioensConToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.operacioensConToolStripMenuItem.Text = " Operaciones Con Tabla ";
+            this.operacioensConToolStripMenuItem.Click += new System.EventHandler(this.operacioensConToolStripMenuItem_Click);
             // 
             // consultaToolStripMenuItem
             // 

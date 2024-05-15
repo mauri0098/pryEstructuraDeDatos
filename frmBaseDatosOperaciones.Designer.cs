@@ -30,14 +30,14 @@
         {
             this.dgvBaseDeOperaciones = new System.Windows.Forms.DataGridView();
             this.gbOperacionesDeProyeccìon = new System.Windows.Forms.GroupBox();
-            this.gbOperaciónesDeSelección = new System.Windows.Forms.GroupBox();
-            this.gbOperaciónesAlgebraicas = new System.Windows.Forms.GroupBox();
             this.btnProyeccìonSimple = new System.Windows.Forms.Button();
             this.btnProyeccìonMultiatributo = new System.Windows.Forms.Button();
             this.btnJuntar = new System.Windows.Forms.Button();
+            this.gbOperaciónesDeSelección = new System.Windows.Forms.GroupBox();
             this.btnSelecciónSimple = new System.Windows.Forms.Button();
             this.btnSelecciónMultiatributo = new System.Windows.Forms.Button();
             this.btnSelecciónPorConvolución = new System.Windows.Forms.Button();
+            this.gbOperaciónesAlgebraicas = new System.Windows.Forms.GroupBox();
             this.bntUnion = new System.Windows.Forms.Button();
             this.btnIntersección = new System.Windows.Forms.Button();
             this.btnDiferencia = new System.Windows.Forms.Button();
@@ -65,31 +65,7 @@
             this.gbOperacionesDeProyeccìon.Size = new System.Drawing.Size(228, 138);
             this.gbOperacionesDeProyeccìon.TabIndex = 1;
             this.gbOperacionesDeProyeccìon.TabStop = false;
-            this.gbOperacionesDeProyeccìon.Text = "Operaciones De Proyección - SELECT";
-            // 
-            // gbOperaciónesDeSelección
-            // 
-            this.gbOperaciónesDeSelección.Controls.Add(this.btnSelecciónSimple);
-            this.gbOperaciónesDeSelección.Controls.Add(this.btnSelecciónMultiatributo);
-            this.gbOperaciónesDeSelección.Controls.Add(this.btnSelecciónPorConvolución);
-            this.gbOperaciónesDeSelección.Location = new System.Drawing.Point(239, 259);
-            this.gbOperaciónesDeSelección.Name = "gbOperaciónesDeSelección";
-            this.gbOperaciónesDeSelección.Size = new System.Drawing.Size(242, 138);
-            this.gbOperaciónesDeSelección.TabIndex = 0;
-            this.gbOperaciónesDeSelección.TabStop = false;
-            this.gbOperaciónesDeSelección.Text = "Operaciónes De Selección - WHERE";
-            // 
-            // gbOperaciónesAlgebraicas
-            // 
-            this.gbOperaciónesAlgebraicas.Controls.Add(this.bntUnion);
-            this.gbOperaciónesAlgebraicas.Controls.Add(this.btnIntersección);
-            this.gbOperaciónesAlgebraicas.Controls.Add(this.btnDiferencia);
-            this.gbOperaciónesAlgebraicas.Location = new System.Drawing.Point(487, 259);
-            this.gbOperaciónesAlgebraicas.Name = "gbOperaciónesAlgebraicas";
-            this.gbOperaciónesAlgebraicas.Size = new System.Drawing.Size(243, 138);
-            this.gbOperaciónesAlgebraicas.TabIndex = 0;
-            this.gbOperaciónesAlgebraicas.TabStop = false;
-            this.gbOperaciónesAlgebraicas.Text = "Operaciónes Algebraicas";
+            this.gbOperacionesDeProyeccìon.Text = "Operaciones de proyección - SELECT";
             // 
             // btnProyeccìonSimple
             // 
@@ -118,6 +94,18 @@
             this.btnJuntar.Text = "Juntar";
             this.btnJuntar.UseVisualStyleBackColor = true;
             // 
+            // gbOperaciónesDeSelección
+            // 
+            this.gbOperaciónesDeSelección.Controls.Add(this.btnSelecciónSimple);
+            this.gbOperaciónesDeSelección.Controls.Add(this.btnSelecciónMultiatributo);
+            this.gbOperaciónesDeSelección.Controls.Add(this.btnSelecciónPorConvolución);
+            this.gbOperaciónesDeSelección.Location = new System.Drawing.Point(239, 259);
+            this.gbOperaciónesDeSelección.Name = "gbOperaciónesDeSelección";
+            this.gbOperaciónesDeSelección.Size = new System.Drawing.Size(242, 138);
+            this.gbOperaciónesDeSelección.TabIndex = 0;
+            this.gbOperaciónesDeSelección.TabStop = false;
+            this.gbOperaciónesDeSelección.Text = "Operaciónes de selección - WHERE";
+            // 
             // btnSelecciónSimple
             // 
             this.btnSelecciónSimple.Location = new System.Drawing.Point(25, 23);
@@ -145,13 +133,25 @@
             this.btnSelecciónPorConvolución.Text = "Selección Por Convolución";
             this.btnSelecciónPorConvolución.UseVisualStyleBackColor = true;
             // 
+            // gbOperaciónesAlgebraicas
+            // 
+            this.gbOperaciónesAlgebraicas.Controls.Add(this.bntUnion);
+            this.gbOperaciónesAlgebraicas.Controls.Add(this.btnIntersección);
+            this.gbOperaciónesAlgebraicas.Controls.Add(this.btnDiferencia);
+            this.gbOperaciónesAlgebraicas.Location = new System.Drawing.Point(487, 259);
+            this.gbOperaciónesAlgebraicas.Name = "gbOperaciónesAlgebraicas";
+            this.gbOperaciónesAlgebraicas.Size = new System.Drawing.Size(243, 138);
+            this.gbOperaciónesAlgebraicas.TabIndex = 0;
+            this.gbOperaciónesAlgebraicas.TabStop = false;
+            this.gbOperaciónesAlgebraicas.Text = "Operaciónes Algebraicas";
+            // 
             // bntUnion
             // 
             this.bntUnion.Location = new System.Drawing.Point(26, 19);
             this.bntUnion.Name = "bntUnion";
             this.bntUnion.Size = new System.Drawing.Size(188, 23);
             this.bntUnion.TabIndex = 8;
-            this.bntUnion.Text = "Intersección";
+            this.bntUnion.Text = "Union";
             this.bntUnion.UseVisualStyleBackColor = true;
             // 
             // btnIntersección

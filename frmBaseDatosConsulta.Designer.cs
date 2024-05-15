@@ -53,6 +53,7 @@
             this.btnListar.TabIndex = 2;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // dgvConsultaEnSQL
             // 
@@ -66,6 +67,7 @@
             // 
             this.txtConsultaEnSQL.Location = new System.Drawing.Point(12, 44);
             this.txtConsultaEnSQL.MinimumSize = new System.Drawing.Size(600, 210);
+            this.txtConsultaEnSQL.Multiline = true;
             this.txtConsultaEnSQL.Name = "txtConsultaEnSQL";
             this.txtConsultaEnSQL.Size = new System.Drawing.Size(707, 210);
             this.txtConsultaEnSQL.TabIndex = 4;

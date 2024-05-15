@@ -21,5 +21,11 @@ namespace pryEstructuraDeDatos
         {
 
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            clsBasedeDatos objBasedeDatos = new clsBasedeDatos();
+            objBasedeDatos.Listar1(dgvConsultaEnSQL, txtConsultaEnSQL.Text);
+        }
     }
 }

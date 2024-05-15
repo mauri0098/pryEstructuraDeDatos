@@ -40,6 +40,7 @@
             // 
             this.txtRepaso.Location = new System.Drawing.Point(12, 45);
             this.txtRepaso.MinimumSize = new System.Drawing.Size(600, 100);
+            this.txtRepaso.Multiline = true;
             this.txtRepaso.Name = "txtRepaso";
             this.txtRepaso.Size = new System.Drawing.Size(684, 100);
             this.txtRepaso.TabIndex = 7;

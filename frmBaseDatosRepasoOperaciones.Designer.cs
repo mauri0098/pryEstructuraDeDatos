@@ -38,7 +38,7 @@
             // 
             // txtRepaso
             // 
-            this.txtRepaso.Location = new System.Drawing.Point(12, 45);
+            this.txtRepaso.Location = new System.Drawing.Point(12, 42);
             this.txtRepaso.MinimumSize = new System.Drawing.Size(600, 100);
             this.txtRepaso.Multiline = true;
             this.txtRepaso.Name = "txtRepaso";

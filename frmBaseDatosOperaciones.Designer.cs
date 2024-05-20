@@ -137,6 +137,7 @@
             this.btnSelecciónPorConvolución.TabIndex = 7;
             this.btnSelecciónPorConvolución.Text = "Selección Por Convolución";
             this.btnSelecciónPorConvolución.UseVisualStyleBackColor = true;
+            this.btnSelecciónPorConvolución.Click += new System.EventHandler(this.btnSelecciónPorConvolución_Click);
             // 
             // gbOperaciónesAlgebraicas
             // 

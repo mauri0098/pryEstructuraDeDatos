@@ -57,5 +57,13 @@ namespace pryEstructuraDeDatos
             bases.Listar1(dgvBaseDeOperaciones, sql);
 
         }
+
+        private void btnSelecciónPorConvolución_Click(object sender, EventArgs e)
+        {
+
+
+
+
+        }
     }   
 }

@@ -75,6 +75,7 @@
             this.btnProyeccìonSimple.TabIndex = 2;
             this.btnProyeccìonSimple.Text = "Proyeccìon Simple";
             this.btnProyeccìonSimple.UseVisualStyleBackColor = true;
+            this.btnProyeccìonSimple.Click += new System.EventHandler(this.btnProyeccìonSimple_Click);
             // 
             // btnProyeccìonMultiatributo
             // 
@@ -84,6 +85,7 @@
             this.btnProyeccìonMultiatributo.TabIndex = 3;
             this.btnProyeccìonMultiatributo.Text = "Proyeccìon Multiatributo";
             this.btnProyeccìonMultiatributo.UseVisualStyleBackColor = true;
+            this.btnProyeccìonMultiatributo.Click += new System.EventHandler(this.btnProyeccìonMultiatributo_Click);
             // 
             // btnJuntar
             // 
@@ -93,6 +95,7 @@
             this.btnJuntar.TabIndex = 4;
             this.btnJuntar.Text = "Juntar";
             this.btnJuntar.UseVisualStyleBackColor = true;
+            this.btnJuntar.Click += new System.EventHandler(this.btnJuntar_Click);
             // 
             // gbOperaciónesDeSelección
             // 
@@ -114,6 +117,7 @@
             this.btnSelecciónSimple.TabIndex = 5;
             this.btnSelecciónSimple.Text = "Selección Simple";
             this.btnSelecciónSimple.UseVisualStyleBackColor = true;
+            this.btnSelecciónSimple.Click += new System.EventHandler(this.btnSelecciónSimple_Click);
             // 
             // btnSelecciónMultiatributo
             // 
@@ -123,6 +127,7 @@
             this.btnSelecciónMultiatributo.TabIndex = 6;
             this.btnSelecciónMultiatributo.Text = "Selección Multiatributo";
             this.btnSelecciónMultiatributo.UseVisualStyleBackColor = true;
+            this.btnSelecciónMultiatributo.Click += new System.EventHandler(this.btnSelecciónMultiatributo_Click);
             // 
             // btnSelecciónPorConvolución
             // 

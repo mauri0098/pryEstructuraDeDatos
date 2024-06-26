@@ -60,10 +60,39 @@ namespace pryEstructuraDeDatos
 
         private void btnSelecciónPorConvolución_Click(object sender, EventArgs e)
         {
+            String sql = "SELECT * " +
+                "FROM (SELECT * FROM Libro as T1 WHERE T1.IdIdioma > 5) " +
+                "as T2 WHERE T2.IdAutor > 10";
+            bases.Listar1(dgvBaseDeOperaciones, sql);
 
 
 
+        }
 
+        private void bntUnion_Click(object sender, EventArgs e)
+        {
+            String varSQL = "SELECT * FROM Libro WHERE IdAutor = 2 " +
+                "UNION " +
+                "SELECT* FROM Libro WHERE IdAutor = 5 " +
+                "UNION " +
+                "SELECT* FROM Libro WHERE IdAutor = 3";
+            bases.Listar1(dgvBaseDeOperaciones, varSQL);
+        }
+
+        private void btnIntersección_Click(object sender, EventArgs e)
+        {
+            String varSQL = "SELECT * FROM Libro WHERE IdIdioma " +
+                "IN " +
+                "(SELECT DISTINCT IdIdioma FROM Libro WHERE IdIdioma < 5)";
+            bases.Listar1(dgvBaseDeOperaciones, varSQL);
+        }
+
+        private void btnDiferencia_Click(object sender, EventArgs e)
+        {
+            String varSQL = "SELECT * FROM Libro WHERE IdIdioma " +
+                "NOT IN " +
+                "(SELECT DISTINCT IdIdioma FROM Libro WHERE IdIdioma< 5)";
+            bases.Listar1(dgvBaseDeOperaciones, varSQL);
         }
     }   
 }

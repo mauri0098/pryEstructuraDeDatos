@@ -159,6 +159,7 @@
             this.bntUnion.TabIndex = 8;
             this.bntUnion.Text = "Union";
             this.bntUnion.UseVisualStyleBackColor = true;
+            this.bntUnion.Click += new System.EventHandler(this.bntUnion_Click);
             // 
             // btnIntersección
             // 
@@ -168,6 +169,7 @@
             this.btnIntersección.TabIndex = 9;
             this.btnIntersección.Text = "Intersección";
             this.btnIntersección.UseVisualStyleBackColor = true;
+            this.btnIntersección.Click += new System.EventHandler(this.btnIntersección_Click);
             // 
             // btnDiferencia
             // 
@@ -177,6 +179,7 @@
             this.btnDiferencia.TabIndex = 10;
             this.btnDiferencia.Text = "Diferencia";
             this.btnDiferencia.UseVisualStyleBackColor = true;
+            this.btnDiferencia.Click += new System.EventHandler(this.btnDiferencia_Click);
             // 
             // frmBaseDatosOperaciones
             // 

@@ -19,7 +19,8 @@ namespace pryEstructuraDeDatos
 
         private void repasoDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmBaseDatosRepasoOperaciones frmBaseDatosRepasoOperaciones  = new   frmBaseDatosRepasoOperaciones();
+            frmBaseDatosRepasoOperaciones.ShowDialog();
         }
 
         private void datosDeAlumnoToolStripMenuItem_Click(object sender, EventArgs e)

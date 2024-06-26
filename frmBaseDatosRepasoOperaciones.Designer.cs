@@ -28,39 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtRepaso = new System.Windows.Forms.TextBox();
-            this.dgvRepaso = new System.Windows.Forms.DataGridView();
+            this.lblOperacion = new System.Windows.Forms.TextBox();
+            this.dgvOperaciones = new System.Windows.Forms.DataGridView();
             this.btnListar = new System.Windows.Forms.Button();
             this.lblOperciónaRealizar = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRepaso)).BeginInit();
+            this.cbOperaciones = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOperaciones)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtRepaso
+            // lblOperacion
             // 
-            this.txtRepaso.Location = new System.Drawing.Point(12, 42);
-            this.txtRepaso.MinimumSize = new System.Drawing.Size(600, 100);
-            this.txtRepaso.Multiline = true;
-            this.txtRepaso.Name = "txtRepaso";
-            this.txtRepaso.Size = new System.Drawing.Size(684, 100);
-            this.txtRepaso.TabIndex = 7;
+            this.lblOperacion.Location = new System.Drawing.Point(8, 42);
+            this.lblOperacion.MinimumSize = new System.Drawing.Size(600, 100);
+            this.lblOperacion.Multiline = true;
+            this.lblOperacion.Name = "lblOperacion";
+            this.lblOperacion.Size = new System.Drawing.Size(688, 100);
+            this.lblOperacion.TabIndex = 7;
             // 
-            // dgvRepaso
+            // dgvOperaciones
             // 
-            this.dgvRepaso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRepaso.Location = new System.Drawing.Point(12, 151);
-            this.dgvRepaso.Name = "dgvRepaso";
-            this.dgvRepaso.Size = new System.Drawing.Size(684, 280);
-            this.dgvRepaso.TabIndex = 6;
+            this.dgvOperaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOperaciones.Location = new System.Drawing.Point(8, 148);
+            this.dgvOperaciones.Name = "dgvOperaciones";
+            this.dgvOperaciones.Size = new System.Drawing.Size(688, 294);
+            this.dgvOperaciones.TabIndex = 6;
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(600, 15);
+            this.btnListar.Location = new System.Drawing.Point(600, 13);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(96, 21);
+            this.btnListar.Size = new System.Drawing.Size(96, 24);
             this.btnListar.TabIndex = 5;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // lblOperciónaRealizar
             // 
@@ -71,27 +72,51 @@
             this.lblOperciónaRealizar.TabIndex = 8;
             this.lblOperciónaRealizar.Text = "Opercióna a realizar en la base de datos";
             // 
-            // comboBox1
+            // cbOperaciones
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(212, 15);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(382, 21);
-            this.comboBox1.TabIndex = 9;
+            this.cbOperaciones.FormattingEnabled = true;
+            this.cbOperaciones.Items.AddRange(new object[] {
+            "Proyección Simple de Nombres de los autores",
+            "Proyección Simple de Nombres de los países",
+            "Proyección Simple de Nombres de los idiomas",
+            "Proyección Multiatributo de Títulos de los libros con la cantidad de unidades dis" +
+                "ponibles en inventario",
+            "Proyección Multiatributo de Títulos de los libros con su precio de venta",
+            "Proyección Simple de Títulos de los libros ordenados alfabéticamente de la Z a la" +
+                " A",
+            "Union De Libros",
+            "Union De Los Autores",
+            "Intersección de Paises",
+            "Union de Idiomas ",
+            "Juntar Libros con Autores",
+            "Diferencia de Autores",
+            "Juntar Libros con Idiomas",
+            "Seleccion simple de Cantidad",
+            "Seleccion simple de Precio",
+            "Seleccion simple de Año ",
+            "Seleccion simple de Iidioma",
+            "Diferencia de Idiomas",
+            "Seleccion simple de Pais",
+            "Union de Paises"});
+            this.cbOperaciones.Location = new System.Drawing.Point(212, 15);
+            this.cbOperaciones.Name = "cbOperaciones";
+            this.cbOperaciones.Size = new System.Drawing.Size(382, 21);
+            this.cbOperaciones.TabIndex = 9;
             // 
             // frmBaseDatosRepasoOperaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 454);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbOperaciones);
             this.Controls.Add(this.lblOperciónaRealizar);
-            this.Controls.Add(this.txtRepaso);
-            this.Controls.Add(this.dgvRepaso);
+            this.Controls.Add(this.lblOperacion);
+            this.Controls.Add(this.dgvOperaciones);
             this.Controls.Add(this.btnListar);
             this.Name = "frmBaseDatosRepasoOperaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Base Datos Repaso Operaciones";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRepaso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOperaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,10 +124,10 @@
 
         #endregion
 
-        public System.Windows.Forms.TextBox txtRepaso;
-        private System.Windows.Forms.DataGridView dgvRepaso;
+        public System.Windows.Forms.TextBox lblOperacion;
+        private System.Windows.Forms.DataGridView dgvOperaciones;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Label lblOperciónaRealizar;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbOperaciones;
     }
 }
